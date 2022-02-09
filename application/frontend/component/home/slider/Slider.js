@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function Slider() {
   return (
     <div>
@@ -8,4 +9,4 @@ function Slider() {
   );
 }
 
-export default componentName;
+export default Slider;

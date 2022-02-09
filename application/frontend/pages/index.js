@@ -3,6 +3,11 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Layout from "../component/layouts/layout";
 import Script from "next/script";
+import Slider from "../component/home/slider/Slider";
+import Testimonial from "../component/home/testimonial/Testimonial";
+import WhyUs from "../component/home/whyUs/WhyUs";
+import Agencies from "../component/home/agencies/Agencies";
+import Contact from "../component/home/contact/Contact";
 
 export default function Home() {
   return (
@@ -19,7 +24,13 @@ export default function Home() {
         ></link>
       </Head>
 
-      <Layout></Layout>
+      <Layout>
+        <Slider/>
+        <WhyUs/>
+        <Agencies/>
+        <Testimonial/>
+        <Contact/>
+        </Layout>
     </>
   );
 }

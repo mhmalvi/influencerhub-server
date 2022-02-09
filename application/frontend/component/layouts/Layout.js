@@ -22,9 +22,9 @@ function Layout({ children }) {
       </header>
 
       <main>{children}</main>
-      <footer>
-        <Footer />
-      </footer>
+       
+        <footer> <Footer /></footer>
+      
     </div>
   );
 }
