@@ -1,9 +1,9 @@
 import React from "react";
 
-function componentName() {
+function Slider() {
   return (
     <div>
-      <h1>navbar</h1>
+      <h1>slider</h1>
     </div>
   );
 }
