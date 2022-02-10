@@ -2,12 +2,16 @@ import Image from "next/image";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Layout from "../component/layouts/layout";
-import Script from "next/script";
 import Slider from "../component/home/slider/Slider";
-import Testimonial from "../component/home/testimonial/Testimonial";
-import WhyUs from "../component/home/whyUs/WhyUs";
-import Agencies from "../component/home/agencies/Agencies";
 import Contact from "../component/home/contact/Contact";
+import Mapview from "../component/home/mapview/Mapview";
+import HomeOverview1 from "../component/home/overview/homeOverview1/HomeOverview1";
+import HomeOverview2 from "../component/home/overview/homeOverview2/HomeOverview2";
+import HomeOverview3 from "../component/home/overview/homeOverview3/HomeOverview3";
+import HomeOverview4 from "../component/home/overview/homeOverview4/HomeOverview4";
+import HomeOverview5 from "../component/home/overview/homeOverview5/HomeOverview5";
+import VideoIntroducing from "../component/home/videoIntroducing/VideoIntroducing";
+import CustomerStories from "../component/home/customerStories/CustomerStories";
 
 export default function Home() {
   return (
@@ -25,12 +29,18 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <Slider/>
-        <WhyUs/>
-        <Agencies/>
-        <Testimonial/>
-        <Contact/>
-        </Layout>
+        <Slider />
+        <Mapview />
+        {/* overview portion of home page */}
+        <HomeOverview1 />
+        <HomeOverview2 />
+        <HomeOverview3 />
+        <HomeOverview4 />
+        <HomeOverview5 />
+        <VideoIntroducing />
+        <CustomerStories />
+        {/* <Contact /> */}
+      </Layout>
     </>
   );
 }

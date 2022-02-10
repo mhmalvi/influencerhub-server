@@ -25,7 +25,7 @@
 //   );
 // }
 // export default MyApp;
-import '../styles/globals.css'
+import "../styles/globals.css";
 import Head from "next/head";
 import Script from "next/script";
 import "bootstrap/dist/css/bootstrap.min.css";
