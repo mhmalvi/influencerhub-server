@@ -1,10 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import LogoImg from "../../public/images/home/image.png";
+
 const Navbar = () => {
   return (
-    <nav className=" navbar navbar-expand-lg navbar-light bg-white">
-      <div className="container-fluid">
+    <nav className="bg-header navbar navbar-expand-lg navbar-light  ">
+      <section className="container-fluid">
         <a className="navbar-brand p-3" href="#">
           <Image
             src={LogoImg}
@@ -145,7 +146,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </section>
     </nav>
   );
 };

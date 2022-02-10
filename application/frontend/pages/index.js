@@ -39,7 +39,7 @@ export default function Home() {
         <HomeOverview5 />
         <VideoIntroducing />
         <CustomerStories />
-        {/* <Contact /> */}
+        <Contact />
       </Layout>
     </>
   );

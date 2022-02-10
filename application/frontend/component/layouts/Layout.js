@@ -17,11 +17,11 @@ function Layout({ children }) {
           crossOrigin="anonymous"
         ></link>
       </Head>
-      <header className="container-fluid">
+      <header>
         <Navbar />
       </header>
 
-      <main className="container">{children}</main>
+      <main>{children}</main>
 
       <footer>
         <Footer />
