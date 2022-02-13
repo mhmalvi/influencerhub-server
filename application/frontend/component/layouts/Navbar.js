@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import LogoImg from "../../public/images/home/image.png";
+import LogoImg from "../../public/images/home/influencer_bg_remover.png";
 
 const Navbar = () => {
   return (
-    <nav className="bg-header navbar navbar-expand-lg navbar-light  ">
+    <nav className="fixed-top  header-bg navbar navbar-expand-lg navbar-light  ">
       <section className="container-fluid">
         <a className="navbar-brand p-3" href="#">
           <Image

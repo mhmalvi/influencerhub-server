@@ -40,7 +40,7 @@ main {
   left: 0;
 }
 /* custom button */
-button {
+/* button {
   display: block;
   position: relative;
   margin: 0.5em 0;
@@ -269,5 +269,13 @@ button:hover:after {
       calc(var(--z) * 100px)
     );
   }
-}
+} */
 /* end custom button */
+/* header background */
+.header-bg {
+  background-image: url("../public/images/home/header-background.png");
+}
+/* .btn-bg-color {
+  background-color: #42f32a;
+  color: #42f32a;
+} */
