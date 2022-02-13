@@ -273,9 +273,8 @@ button:hover:after {
 /* end custom button */
 /* header background */
 .header-bg {
-  background-image: url("../public/images/home/header-background.png");
+  background-image: url("../public/images/home/header-background.png") !important;
 }
-/* .btn-bg-color {
-  background-color: #42f32a;
-  color: #42f32a;
-} */
+.btn-bg-color {
+  background-color: #42f32a !important;
+}

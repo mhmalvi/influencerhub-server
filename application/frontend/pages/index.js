@@ -32,11 +32,15 @@ export default function Home() {
         <Slider />
         <Mapview />
         {/* overview portion of home page */}
-        <HomeOverview1 />
-        <HomeOverview2 />
-        <HomeOverview3 />
-        <HomeOverview4 />
-        <HomeOverview5 />
+        <div className="header-bg">
+          <HomeOverview1 />
+          <HomeOverview2 />
+          <HomeOverview3 />
+        </div>
+        <div className="header-bg">
+          <HomeOverview4 />
+          <HomeOverview5 />
+        </div>
         <VideoIntroducing />
         <CustomerStories />
         <Contact />

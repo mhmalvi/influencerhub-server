@@ -34,16 +34,10 @@ function Slider() {
                   I`M A Brand
                 </motion.button> */}
                 <div className="d-flex">
-                  <button
-                    style={{ backgroundColor: "#42f32a" }}
-                    className="btn  text-white  ms-2 my-4 py-2 p-3 fs-4 fw-bolder  ml-5"
-                  >
+                  <button className="btn btn-bg-color text-white  ms-2 my-4 py-2 p-3 fs-4 fw-bolder  ml-5">
                     I`M BRAND
                   </button>
-                  <button
-                    style={{ backgroundColor: "#42f32a" }}
-                    className="btn  text-white  ms-2 my-4 py-2 p-3 fs-4 fw-bolder  ml-5"
-                  >
+                  <button className="btn btn-bg-color text-white  ms-2 my-4 py-2 p-3 fs-4 fw-bolder  ml-5">
                     INFLUENCER
                   </button>
                 </div>
