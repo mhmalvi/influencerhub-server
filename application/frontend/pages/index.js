@@ -36,8 +36,6 @@ export default function Home() {
           <HomeOverview1 />
           <HomeOverview2 />
           <HomeOverview3 />
-        </div>
-        <div className="header-bg">
           <HomeOverview4 />
           <HomeOverview5 />
         </div>
