@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="fixed-top  header-bg navbar navbar-expand-lg navbar-light  ">
       <section className="container-fluid">
-        <a className="navbar-brand p-3" href="#">
+        <a className="navbar-brand p-2" href="#">
           <Image
             src={LogoImg}
             width="250px"

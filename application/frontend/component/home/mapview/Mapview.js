@@ -30,7 +30,7 @@ function Mapview() {
               Philippines, South Korea, Hong Kong and Thailand to name a few.
             </p>
 
-            <button className="btn btn-bg-color text-white  ms-2 my-4 py-2 p-3 fs-4 fw-bolder  ml-5">
+            <button className="btn btn-bg-color rounded-pill text-white  ms-2 my-4 py-2 p-3 fs-4 fw-bolder  ml-5">
               REQUEST A DEMO
             </button>
           </div>
