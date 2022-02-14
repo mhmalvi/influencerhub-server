@@ -279,13 +279,20 @@ button:hover:after {
     circle,
     rgba(63, 94, 251, 1) 0%,
     rgba(252, 70, 107, 1) 100%
-  ) !important; */
-  background: rgb(63, 94, 251);
+  ) !important;
+  /* background: rgb(63, 94, 251);
   background: radial-gradient(
     circle,
     rgba(63, 94, 251, 1) 26%,
     rgba(238, 223, 232, 1) 72%,
     rgba(252, 70, 107, 1) 100%
+  ); */
+  width: 100%;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
   );
 }
 .btn-bg-color {
@@ -363,3 +370,23 @@ button:hover:after {
   color: #6c83a2;
 }
 /* testimonial end */
+.circle {
+  display: block;
+
+  /* border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 0;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  ); */
+  width: 136px;
+  height: 190px;
+  background: #ffc000;
+  display: block;
+  -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}

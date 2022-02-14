@@ -6,16 +6,16 @@ function VideoIntroducing() {
     <section className=" ">
       <section className="container my-3">
         <div className="row align-items-center">
-          <section className="col-6 ">
+          <section className="col-md-6 ">
             <div className="my-4 py-2">
               <iframe
-                width="500"
+                className="w-100"
                 height="420"
                 src="https://www.youtube.com/embed/tgbNymZ7vqY"
               ></iframe>
             </div>
           </section>
-          <section className="col-6 ">
+          <section className="col-md-6 ">
             <div className=" my-3 py-1">
               <h1
                 className="my-3 py-1   fs-1     fw-bolder  whileHover={{

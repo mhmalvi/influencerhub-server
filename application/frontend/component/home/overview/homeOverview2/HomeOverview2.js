@@ -6,7 +6,7 @@ function HomeOverview2() {
     <section className="text-white">
       <section className="container   ">
         <div className="row align-items-center">
-          <section className="col-5 ">
+          <section className="col-md-5 ">
             <div className="  my-4 py-2">
               <h3
                 className="my-4 py-2   fs-2   fw-bolder  whileHover={{
@@ -25,7 +25,7 @@ function HomeOverview2() {
               </p>
             </div>
           </section>
-          <section className="col-7 ">
+          <section className="col-md-7 ">
             <div className="my-4 py-2">
               <Image src={OverViewImage2} alt="Picture of the author" />
             </div>

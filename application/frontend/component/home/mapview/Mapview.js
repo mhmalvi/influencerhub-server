@@ -4,14 +4,14 @@ import React from "react";
 import MapviewImage from "../../../public/images/home/map-view.png";
 function Mapview() {
   return (
-    <section className="container">
-      <div className="row">
-        <section className="col-5 ">
+    <div className="container">
+      <div className=" row align-items-center">
+        <section className="col-md-5  col-sm-12">
           <div className="my-4 py-2">
             <Image src={MapviewImage} alt="Picture of the author" />
           </div>
         </section>
-        <section className="col-7 ">
+        <section className="col-md-7 col-sm-12 ">
           <div className="text-center my-4 py-2">
             <h1
               className="my-4 py-2 p-3 fs-1 my-5   fw-bolder  whileHover={{
@@ -36,7 +36,7 @@ function Mapview() {
           </div>
         </section>
       </div>
-    </section>
+    </div>
   );
 }
 

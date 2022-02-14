@@ -9,12 +9,12 @@ function HomeOverview3() {
       </h3> */}
       <section className="container ">
         <div className="row align-items-center">
-          <section className="col-7 ">
+          <section className="col-md-7 ">
             <div className="my-4 py-2">
               <Image src={OverViewImage3} alt="Picture of the author" />
             </div>
           </section>
-          <section className="col-5 ">
+          <section className="col-md-5 ">
             <div className="  my-4 py-2">
               <h3
                 className="my-4 py-2   fs-2   fw-bolder  whileHover={{
