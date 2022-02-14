@@ -28,6 +28,15 @@ function Slider() {
         <div className="row my-5 align-items-center ">
           <section className="col-sm-5 my-4 py-2 ">
             <motion.div className="circle m-auto " ref={ref}></motion.div>
+            {/* <motion.div
+              className="circle m-auto "
+              animate={{
+                scale: [1, 2, 2, 1, 1],
+                rotate: [0, 0, 270, 270, 0],
+                borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+              }}
+              ref={ref}
+            /> */}
             <div className="my-4 py-2">
               <h1 className="my-4 py-2 p-3 fs-1    fw-bolder  ">
                 The platform that connects brands with influencers
@@ -37,15 +46,24 @@ function Slider() {
                 influencers
               </p>
 
-              <div>
-                <div className="d-flex">
-                  <button className="btn btn-bg-color   text-white  ms-2 my-4 py-2 p-3 fs-4 fw-bolder  ml-5">
-                    I`M BRAND
-                  </button>
-                  <button className="btn btn-bg-color   text-white  ms-2 my-4 py-2 p-3 fs-4 fw-bolder  ml-5">
-                    INFLUENCER
-                  </button>
-                </div>
+              <div
+                // initial={{ y: -60 }}
+                // animate={{ y: 20 }}
+                // transition={{
+                //   duration: 2,
+                //   ease: "easeInOut",
+                //   times: [0, 0.2, 0.5, 0.8, 1],
+                //   repeat: Infinity,
+                //   repeatDelay: 1,
+                // }}
+                className="d-flex"
+              >
+                <button className="btn btn-bg-color   text-white  ms-2 my-4 py-2 p-3 fs-4 fw-bolder  ml-5">
+                  I`M BRAND
+                </button>
+                <button className="btn btn-bg-color   text-white  ms-2 my-4 py-2 p-3 fs-4 fw-bolder  ml-5">
+                  INFLUENCER
+                </button>
               </div>
             </div>
           </section>

@@ -6,12 +6,22 @@ function Mapview() {
   return (
     <div className="container">
       <div className=" row align-items-center">
-        <section className="col-md-5  col-sm-12">
+        <motion.section
+          initial={{ opacity: 0, x: -180, z: 180 }}
+          animate={{ opacity: 1, x: 0, z: 0 }}
+          transition={{ duration: 3 }}
+          className="col-md-5  col-sm-12"
+        >
           <div className="my-4 py-2">
             <Image src={MapviewImage} alt="Picture of the author" />
           </div>
-        </section>
-        <section className="col-md-7 col-sm-12 ">
+        </motion.section>
+        <motion.section
+          initial={{ opacity: 0, x: 180, z: 180 }}
+          animate={{ opacity: 1, x: 0, z: 0 }}
+          transition={{ duration: 3 }}
+          className="col-md-7 col-sm-12 "
+        >
           <div className="text-center my-4 py-2">
             <h1
               className="my-4 py-2 p-3 fs-1 my-5   fw-bolder  whileHover={{
@@ -34,7 +44,7 @@ function Mapview() {
               REQUEST A DEMO
             </button>
           </div>
-        </section>
+        </motion.section>
       </div>
     </div>
   );
