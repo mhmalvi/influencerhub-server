@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import LoginImg from "../../public/images/home/login_img.webp";
+import LoginImg from "/public/images/home/login_img.webp";
 const login = () => {
   return (
     <section className="vh-100">
@@ -53,34 +53,34 @@ const login = () => {
                       <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
+                          <label
+                            className="form-label"
+                            htmlFor="form3Example3c"
+                          >
+                            Email
+                          </label>
                           <input
                             type="email"
                             id="form3Example3c"
                             className="form-control"
                           />
-                          <label
-                            className="form-label"
-                            htmlFor="form3Example3c"
-                          >
-                            Your Email
-                          </label>
                         </div>
                       </div>
 
                       <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
-                          <input
-                            type="password"
-                            id="form3Example4c"
-                            className="form-control"
-                          />
                           <label
                             className="form-label"
                             htmlFor="form3Example4c"
                           >
                             Password
                           </label>
+                          <input
+                            type="password"
+                            id="form3Example4c"
+                            className="form-control"
+                          />
                         </div>
                       </div>
 
@@ -136,11 +136,13 @@ const login = () => {
                       </div>
                     </form>
                   </div>
-                  <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                  <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-1  ">
                     <Image
                       src={LoginImg}
                       className="img-fluid"
                       alt="login_image"
+                      width={450}
+                      height={300}
                     />
                   </div>
                 </div>

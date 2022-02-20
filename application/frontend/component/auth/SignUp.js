@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-// import { yupResolver } from "@hookform/resolvers/yup";
-// import * as Yup from "yup";
 
 import Link from "next/link";
 import Image from "next/image";
-import SignupImg from "../../public/images/home/sign_in.png.png";
+import SignupImg from "/public/images/home/sign_in.png.png";
 const Signup = () => {
   // form validation
   // const validationSchema = Yup.object().shape({
@@ -28,6 +26,7 @@ const Signup = () => {
   //   acceptTerms: Yup.bool().oneOf([true], "Accept Ts & Cs is required"),
   // });
   // const formOptions = { resolver: yupResolver(validationSchema) };
+  const [data, setData] = useState();
   const {
     register,
     handleSubmit,
@@ -35,25 +34,49 @@ const Signup = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    console.log("data is ", setData(data));
   };
-
-  console.log(errors);
+  // console.log(register, ewegwgwweg);
+  console.log("object is ", data);
+  // console.log(errors);
   return (
     <section className="vh-100">
       <div className="container h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-lg-12 col-xl-11">
-            <div
-              className="  text-black my-3 p-3"
-              //   style={{ borderRadius: "25px" }}
-            >
+            <div className="  text-black my-3 p-3">
               <div className="card-body p-md-5">
                 <div className="row justify-content-center">
                   <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                     <h3 className="text-center fw-bold  mb-5 mx-1 mx-md-4 mt-3 p-2">
-                      Sign up to Influencer
+                      Sign up to
+                      <span className="text-warning ms-2"> </span>
                     </h3>
+                    {/* radio  */}
+                    <div className="form-check  d-flex justify-content-center mb-5">
+                      <label htmlFor="brand">
+                        <input
+                          className="mx-1 me-2"
+                          {...register("user")}
+                          type="radio"
+                          name="user"
+                          value="brand"
+                          id="brand"
+                        />
+                        Brand
+                      </label>
+                      <label htmlFor="influencer">
+                        <input
+                          {...register("user")}
+                          className="me-2 mx-1"
+                          type="radio"
+                          name="user"
+                          value="influencer"
+                          id="influencer"
+                        />
+                        Influencer
+                      </label>
+                    </div>
                     <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4 me-2">
                       <button type="button" className="btn btn-primary btn-lg">
                         Google
@@ -69,84 +92,80 @@ const Signup = () => {
                     <div className="divider mb-3  ">Or</div>
 
                     <form
+                      //handleSubmit(onSubmit)
                       onSubmit={handleSubmit(onSubmit)}
                       className="mx-1 mx-md-4"
                     >
                       <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
-                          <input
-                            type="text"
-                            id="form3Example1c"
-                            className="form-control"
-                            {...register("Name", {
-                              required: true,
-                              maxLength: 80,
-                            })}
-                          />
                           <label
                             className="form-label"
                             htmlFor="form3Example1c"
                           >
-                            Your Name
+                            Name
                           </label>
+                          <input
+                            type="text"
+                            id="form3Example1c"
+                            className="form-control"
+                            {...register(
+                              "name",
+                              {
+                                required: true,
+                                maxLength: 20,
+                              },
+                              { pattern: /^[A-Za-z]+$/i }
+                            )}
+                          />
                         </div>
                       </div>
 
                       <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
-                          <input
-                            type="email"
-                            id="form3Example3c"
-                            className="form-control"
-                            {...register("Email", {
-                              required: true,
-                              pattern: /^\S+@\S+$/i,
-                            })}
-                          />
                           <label
                             className="form-label"
                             htmlFor="form3Example3c"
                           >
-                            Your Email
+                            Email
                           </label>
+                          <input
+                            type="email"
+                            id="form3Example3c"
+                            className="form-control"
+                            {...register("email", {
+                              required: true,
+                              pattern: /^\S+@\S+$/i,
+                            })}
+                          />
                         </div>
                       </div>
 
                       <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
-                          <input
-                            type="password"
-                            id="form3Example4c"
-                            className="form-control"
-                          />
                           <label
                             className="form-label"
                             htmlFor="form3Example4c"
                           >
                             Password
                           </label>
+                          <input
+                            type="password"
+                            id="form3Example4c"
+                            className="form-control"
+                            {...register("password", {
+                              required: "You must specify a password",
+                              minLength: {
+                                value: 8,
+                                message:
+                                  "Password must have at least 8 characters",
+                              },
+                            })}
+                          />
                         </div>
                       </div>
-
-                      {/* <div className="d-flex flex-row align-items-center mb-4">
-                        <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
-                        <div className="form-outline flex-fill mb-0">
-                          <input
-                            type="password"
-                            id="form3Example4c"
-                            className="form-control"
-                          />
-                          <label
-                            className="form-label"
-                            htmlFor="form3Example4c"
-                          >
-                            Password
-                          </label>
-                        </div>
-                      </div> */}
 
                       {/* <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-key fa-lg me-3 fa-fw"></i>
@@ -165,7 +184,7 @@ const Signup = () => {
                         </div>
                       </div> */}
 
-                      {/* <div className="form-check d-flex justify-content-center mb-5">
+                      <div className="form-check d-flex justify-content-center mb-5">
                         <input
                           className="form-check-input me-2"
                           type="checkbox"
@@ -176,25 +195,17 @@ const Signup = () => {
                           className="form-check-label"
                           htmlFor="form2Example3"
                         >
-                          I agree all statements in{" "}
+                          I agree all statements in
                           <a href="">Terms of service</a>
                         </label>
-                      </div> */}
-                      {/* <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                        <button
-                          type="button"
+                      </div>
+
+                      <div className="form-check d-flex justify-content-center mx-2 mb-3 mb-lg-4">
+                        <input
+                          type="submit"
                           className="btn btn-primary btn-lg"
-                        >
-                          <input className="btn btn-primary" type="submit" />
-                        </button>
-                      </div> */}
-                      <div className="d-flex justify-content-center mx-2 mb-3 mb-lg-4">
-                        <button
-                          type="button"
-                          className="btn btn-primary btn-lg"
-                        >
-                          Create Account
-                        </button>
+                          value="SignUp"
+                        />
                       </div>
                       <div className="">
                         <p className="text-center text-muted mt-3 mb-0">
@@ -208,11 +219,13 @@ const Signup = () => {
                       </div>
                     </form>
                   </div>
-                  <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                  <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-1">
                     <Image
                       src={SignupImg}
                       className="img-fluid"
                       alt="Signup image"
+                      width={500}
+                      height={350}
                     />
                   </div>
                 </div>

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import MapviewImage from "../../../public/images/home/map-view.png";
+import MapviewImage from "/public/images/home/map-view.png";
 function Mapview() {
   return (
     <div className="container">
