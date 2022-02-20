@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import LogoImg from "../../public/images/home/influencer_bg_remover.png";
 
@@ -127,22 +128,26 @@ const Navbar = () => {
           </form> */}
           <ul className="ms-auto  navbar-nav   mb-2 mb-lg-0">
             <li className="nav-item  ">
-              <a
-                className="nav-link active fs-6  fw-bolder"
-                aria-current="page"
-                href="#"
-              >
-                LOGIN
-              </a>
+              <Link href="/login">
+                <a
+                  className="nav-link active fs-6  fw-bolder"
+                  aria-current="page"
+                  href="#"
+                >
+                  LOGIN
+                </a>
+              </Link>
             </li>
             <li className="nav-item  ">
-              <a
-                className="nav-link active fs-6  fw-bolder"
-                aria-current="page"
-                href="#"
-              >
-                SIGNUP
-              </a>
+              <Link href="/signup">
+                <a
+                  className="nav-link active fs-6  fw-bolder"
+                  aria-current="page"
+                  href="#"
+                >
+                  SIGNUP
+                </a>
+              </Link>
             </li>
           </ul>
         </div>

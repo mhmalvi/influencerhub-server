@@ -5,12 +5,12 @@ import { motion, useAnimationFrame, useSpring } from "framer-motion";
 function Slider() {
   //framer motion
   const ref = useRef(null);
-
-  useAnimationFrame((t) => {
-    const rotate = Math.sin(t / 10000) * 200;
-    const y = (1 + Math.sin(t / 1000)) * -50;
-    ref.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
-  });
+  // animation rotation setup
+  // useAnimationFrame((t) => {
+  //   const rotate = Math.sin(t / 10000) * 200;
+  //   const y = (1 + Math.sin(t / 1000)) * -50;
+  //   ref.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
+  // });
   return (
     <motion.div
       initial={{ y: -250, opacity: 0 }}
@@ -27,7 +27,9 @@ function Slider() {
       <div className="container   my-5 py-3  ">
         <div className="row my-5 align-items-center ">
           <section className="col-sm-5 my-4 py-2 ">
-            <motion.div className="circle m-auto " ref={ref}></motion.div>
+            {/* egg animation added start */}
+            {/* <motion.div className="circle m-auto mt-5 " ref={ref}></motion.div> */}
+            {/* egg animation added end */}
             {/* <motion.div
               className="circle m-auto "
               animate={{
@@ -37,7 +39,7 @@ function Slider() {
               }}
               ref={ref}
             /> */}
-            <div className="my-4 py-2">
+            <div className="my-4 pb-2">
               <h1 className="my-4 py-2 p-3 fs-1    fw-bolder  ">
                 The platform that connects brands with influencers
               </h1>

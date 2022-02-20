@@ -5,9 +5,11 @@ import OverViewImage1 from "../../../../public/images/home/overview-image-1.png"
 function HomeOverview1() {
   return (
     <section className="text-white">
-      <h3 className="text-center p-3   fs-1  my-6  fw-bolder ">
-        Make the most of your influencer marketing program with
-      </h3>
+      <Roll left>
+        <h3 className="text-center p-3   fs-1  my-6  fw-bolder ">
+          Make the most of your influencer marketing program with
+        </h3>
+      </Roll>
       <section
         initial={{ opacity: 0, x: 180, z: 180 }}
         animate={{ opacity: 1, x: 0, z: 0 }}
