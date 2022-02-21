@@ -28,6 +28,7 @@ const Signup = () => {
   // const formOptions = { resolver: yupResolver(validationSchema) };
   const [data, setData] = useState('');
   const [value,  setValue] = useState('');
+  const SignUpWithGoogle=()=>{}
 
   const {
     register,
