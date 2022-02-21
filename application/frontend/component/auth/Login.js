@@ -1,8 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import LoginImg from "/public/images/home/login_img.webp";
 const login = () => {
+
+  const [data, setData] = useState('');
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+     setData(data);
+  };
+  
+  // console.log(register, ewegwgwweg);
+  console.log("object is ", data);
+  console.log("error is is ",errors);
   return (
     <section className="vh-100">
       <div className="container h-100">
@@ -32,7 +48,7 @@ const login = () => {
 
                     <div className="divider mb-3  ">Or</div>
 
-                    <form className="mx-1 mx-md-4">
+                    <form className="mx-1 mx-md-4" onSubmit={handleSubmit(onSubmit )}>
                       {/* <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
@@ -50,7 +66,7 @@ const login = () => {
                         </div>
                       </div> */}
 
-                      <div className="d-flex flex-row align-items-center mb-4">
+                      {/* <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
                           <label
@@ -81,6 +97,63 @@ const login = () => {
                             id="form3Example4c"
                             className="form-control"
                           />
+                        </div>
+                      </div> */}
+                        <div className="d-flex flex-row align-items-center mb-2">
+                        <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                        <div className="form-outline flex-fill mb-0">
+                          <label
+                            className="form-label"
+                            htmlFor="form3Example3c"
+                          >
+                            Email
+                          </label>
+                          <input
+                            type="email"
+                            id="form3Example3c"
+                            className="form-control"
+                            {...register("email",
+                            {
+                              required: true,
+                              pattern:{value: /^\S+@\S+$/i, message:
+                                "Email must   required"},
+                               
+                              
+                              minLength: {
+                                value: 2,
+                                  message:
+                                    "Email must   required",
+                            }},
+                            
+                           )}
+                          />
+                           <small className="text-danger">{errors.email?.message}</small>
+                        </div>
+                      </div>
+
+                      <div className="d-flex flex-row align-items-center mb-2">
+                        <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div className="form-outline flex-fill mb-0">
+                          <label
+                            className="form-label"
+                            htmlFor="form3Example4c"
+                          >
+                            Password
+                          </label>
+                          <input
+                            type="password"
+                            id="form3Example4c"
+                            className="form-control"
+                            {...register("password", {
+                              required: true,
+                              minLength: {
+                                value: 8,
+                                message:
+                                  "Password must have at least 8 characters",
+                              },
+                            })}
+                          />
+                           <small className="text-danger">{errors.password?.message}</small>
                         </div>
                       </div>
 
@@ -117,12 +190,11 @@ const login = () => {
                         </label>
                       </div> */}
                       <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                        <button
-                          type="button"
+                        <input
+                          type="submit"
                           className="btn btn-primary btn-lg"
-                        >
-                          Login
-                        </button>
+                          value= 'Login'
+                        /> 
                       </div>
                       <div className="">
                         <p className="text-center text-muted mt-3 mb-0">

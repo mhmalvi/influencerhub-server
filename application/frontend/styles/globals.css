@@ -429,3 +429,8 @@ and left sides of the text */
 .divider:not(:empty)::after {
   margin-left: 0.25em;
 }
+.radio-btn{
+  width: 20px;
+  height: 20px;
+  color: goldenrod !important;
+}

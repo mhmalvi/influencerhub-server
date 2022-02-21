@@ -43,7 +43,7 @@ const Signup = () => {
   }
   // console.log(register, ewegwgwweg);
   console.log("object is ", data);
-   console.log("error is is ",errors);
+  console.log("error is is ",errors);
   return (
     <section className="vh-100  ">
       <div className="container h-100">
@@ -53,15 +53,15 @@ const Signup = () => {
               <div className="card-body p-md-5">
                 <div className="row justify-content-center">
                   <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-                    <h3 className="text-center fw-bold  mb-5 mx-1 mx-md-4 mt-3 p-2">
+                    <h3 className="text-center fw-bolder fs-4  mb-3 mx-1 mx-md-4 mt-5 p-2">
                       Sign up to
                       <span className="text-warning ms-2"> {value}</span>
                     </h3>
                     {/* radio  */}
-                    <div className="form-check  d-flex justify-content-center mb-5">
-                      <label htmlFor="brand">
+                    <div className="form-check  d-flex justify-content-center my-4 fs-5 fw-bolder ">
+                      <label htmlFor="brand" className="me-5">
                         <input
-                          className="mx-1 me-2"
+                          className="mx-1 me-2 radio-btn"
                           {...register("user")}
                           type="radio"
                           name="user"
@@ -71,10 +71,10 @@ const Signup = () => {
                         />
                         Brand
                       </label>
-                      <label htmlFor="influencer">
+                      <label htmlFor="influencer"  >
                         <input
                           {...register("user")}
-                          className="me-2 mx-1"
+                          className="me-2 mx-1 radio-btn  "
                           type="radio"
                           name="user"
                           value="influencer"
@@ -84,8 +84,8 @@ const Signup = () => {
                         Influencer
                       </label>
                     </div>
-                    <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4 me-2">
-                      <button type="button" className="btn btn-primary btn-lg">
+                    <div className="d-flex justify-content-center mx-4   me-2">
+                      <button type="button" className="btn btn-primary btn-lg me-5 ">
                         Google
                       </button>
                       <button
@@ -104,7 +104,7 @@ const Signup = () => {
                        
                       className="mx-1 mx-md-4"
                     >
-                      <div className="d-flex flex-row align-items-center mb-4">
+                      <div className="d-flex flex-row align-items-center mb-2">
                         <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
                           <label
@@ -135,7 +135,7 @@ const Signup = () => {
                         </div>
                       </div>
 
-                      <div className="d-flex flex-row align-items-center mb-4">
+                      <div className="d-flex flex-row align-items-center mb-2">
                         <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
                           <label
@@ -153,10 +153,10 @@ const Signup = () => {
                               required: true,
                               pattern:{value: /^\S+@\S+$/i, message:
                                 "Email must   required"},
-                              maxLength: 20,
+                               
                               
                               minLength: {
-                                value: 5,
+                                value: 2,
                                   message:
                                     "Email must   required",
                             }},
@@ -167,7 +167,7 @@ const Signup = () => {
                         </div>
                       </div>
 
-                      <div className="d-flex flex-row align-items-center mb-4">
+                      <div className="d-flex flex-row align-items-center mb-2">
                         <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
                           <label
@@ -192,7 +192,7 @@ const Signup = () => {
                            <small className="text-danger">{errors.password?.message}</small>
                         </div>
                       </div>
-                       <div className="form-check d-flex justify-content-center mb-5">
+                       <div className="form-check d-flex justify-content-center mb-2">
                         <input
                           className="form-check-input me-2"
                           type="checkbox"
@@ -210,12 +210,12 @@ const Signup = () => {
                       <div className="form-check d-flex justify-content-center mx-2 mb-3 mb-lg-4">
                         <input
                           type="submit"
-                          className="btn btn-primary btn-lg"
+                          className="btn btn-lg btn-primary"
                           value="SignUp" 
                            
                         />
                       </div>
-                      <div className="">
+                      <div  >
                         <p className="text-center text-muted mt-3 mb-0">
                           Have already an account?
                           <Link href="/login">
