@@ -4,7 +4,7 @@ import { Roll } from "react-reveal";
 import OverViewImage4 from "../../../../public/images/home/overview-image-4.png";
 function HomeOverview4() {
   return (
-    <section className="text-white">
+    <section>
       <section className="container   ">
         <div className="row align-items-center">
           <section className="col-md-5 ">

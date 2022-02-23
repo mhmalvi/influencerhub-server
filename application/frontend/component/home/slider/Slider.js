@@ -22,9 +22,9 @@ function Slider() {
         stiffness: 100,
         scale: 1.5,
       }}
-      className="header-bg   text-white  "
+      className="header-bg "
     >
-      <div className="container   my-5 py-3  ">
+      <div className="container   mt-5 py-3  ">
         <div className="row my-5 align-items-center ">
           <section className="col-sm-5 my-4 py-2 ">
             {/* egg animation added start */}

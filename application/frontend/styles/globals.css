@@ -30,6 +30,11 @@ a {
     rgba(103, 214, 239, 1) 100%
   );
 }
+.nav-scroll {
+  top: 0;
+  transition-timing-function: ease-in;
+  transition: 0.5s;
+}
 /* footer */
 body {
   position: relative;
@@ -299,10 +304,10 @@ button:hover:after {
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   ); */
-  background: #fdcbb4 !important;
+  /* background: #f2f7f2 !important; */
 }
 .btn-bg-color {
-  background-color: #42f32a !important;
+  background-color: #14a800 !important;
 }
 /* testimonial start */
 .home-testimonial {
@@ -429,7 +434,7 @@ and left sides of the text */
 .divider:not(:empty)::after {
   margin-left: 0.25em;
 }
-.radio-btn{
+.radio-btn {
   width: 20px;
   height: 20px;
   color: goldenrod !important;

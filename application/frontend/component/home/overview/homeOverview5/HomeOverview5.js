@@ -4,7 +4,7 @@ import { Roll } from "react-reveal";
 import OverViewImage5 from "../../../../public/images/home/overview-image-5.png";
 function HomeOverview5() {
   return (
-    <section className=" text-white ">
+    <section>
       {/* <h3 className="text-center p-3   fs-1  my-6  fw-bolder ">
         Make the most of your influencer marketing program with
       </h3> */}

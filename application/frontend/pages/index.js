@@ -14,6 +14,9 @@ import VideoIntroducing from "../component/home/videoIntroducing/VideoIntroducin
 import CustomerStories from "../component/home/customerStories/CustomerStories";
 
 export default function Home() {
+  // const navbarScroll = document.getElementById("navbar-scroll");
+  //console.log(navbarScroll);
+
   return (
     <>
       <Head>
@@ -30,18 +33,20 @@ export default function Home() {
 
       <Layout>
         <Slider />
-        <Mapview />
+
         {/* overview portion of home page */}
         <div className="header-bg">
           <HomeOverview1 />
           <HomeOverview2 />
           <HomeOverview3 />
-          <HomeOverview4 />
-          <HomeOverview5 />
+          <Mapview />
+          {/* <HomeOverview4 />
+          <HomeOverview5 /> */}
         </div>
         <VideoIntroducing />
         <CustomerStories />
-        <Contact />
+
+        {/* <Contact /> */}
       </Layout>
     </>
   );

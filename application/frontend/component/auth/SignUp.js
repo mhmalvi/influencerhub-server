@@ -26,9 +26,10 @@ const Signup = () => {
   //   acceptTerms: Yup.bool().oneOf([true], "Accept Ts & Cs is required"),
   // });
   // const formOptions = { resolver: yupResolver(validationSchema) };
-  const [data, setData] = useState('');
-  const [value,  setValue] = useState('');
-  const SignUpWithGoogle=()=>{}
+  const axios = require("axios").default;
+  const [signupData, setData] = useState([]);
+  const [value, setValue] = useState("");
+  const SignUpWithGoogle = () => {};
 
   const {
     register,
@@ -36,15 +37,31 @@ const Signup = () => {
     reset,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
-     setData(data);
-  };
-  const handle=e=>{
+
+  const handle = (e) => {
     setValue(e.target.value);
-  }
-  // console.log(register, ewegwgwweg);
-  console.log("object is ", data);
-  console.log("error is is ",errors);
+  };
+  const onSubmit = async (data) => {
+    await setData(data);
+    signupData.user = value;
+    axios
+      .post("https://reqres.in/api/users", {
+        signupData,
+
+        // value,
+        // status: "pending",
+      })
+      .then((res) => {
+        res.data.user = value;
+        console.log("my res is", res.data?.signupData);
+        if (res.data.user === value) {
+          alert("Data added successfully");
+          reset();
+        }
+      });
+  };
+  console.log("error is is ", errors);
+  // console.log("value of user ", value);
   return (
     <section className="vh-100  ">
       <div className="container h-100">
@@ -63,7 +80,7 @@ const Signup = () => {
                       <label htmlFor="brand" className="me-5">
                         <input
                           className="mx-1 me-2 radio-btn"
-                          {...register("user")}
+                          {...register("user", { required: true })}
                           type="radio"
                           name="user"
                           value="brand"
@@ -72,9 +89,9 @@ const Signup = () => {
                         />
                         Brand
                       </label>
-                      <label htmlFor="influencer"  >
+                      <label htmlFor="influencer">
                         <input
-                          {...register("user")}
+                          {...register("user", { required: true })}
                           className="me-2 mx-1 radio-btn  "
                           type="radio"
                           name="user"
@@ -86,7 +103,10 @@ const Signup = () => {
                       </label>
                     </div>
                     <div className="d-flex justify-content-center mx-4   me-2">
-                      <button type="button" className="btn btn-primary btn-lg me-5 ">
+                      <button
+                        type="button"
+                        className="btn btn-primary btn-lg me-5 "
+                      >
                         Google
                       </button>
                       <button
@@ -101,8 +121,7 @@ const Signup = () => {
 
                     <form
                       //handleSubmit(onSubmit)
-                      onSubmit={handleSubmit(onSubmit )}
-                       
+                      onSubmit={handleSubmit(onSubmit)}
                       className="mx-1 mx-md-4"
                     >
                       <div className="d-flex flex-row align-items-center mb-2">
@@ -120,19 +139,21 @@ const Signup = () => {
                             className="form-control"
                             {...register(
                               "name",
-                               
+
                               {
                                 required: true,
                                 maxLength: 20,
                                 minLength: {
                                   value: 5,
-                                  message:
-                                    "Name must   least 5 characters",
-                              }},
+                                  message: "Name must   least 5 characters",
+                                },
+                              },
                               { pattern: /^[A-Za-z]+$/i }
                             )}
                           />
-                                <small className="text-danger">{errors.name?.message}</small>  
+                          <small className="text-danger">
+                            {errors.name?.message}
+                          </small>
                         </div>
                       </div>
 
@@ -149,22 +170,22 @@ const Signup = () => {
                             type="email"
                             id="form3Example3c"
                             className="form-control"
-                            {...register("email",
-                            {
+                            {...register("email", {
                               required: true,
-                              pattern:{value: /^\S+@\S+$/i, message:
-                                "Email must   required"},
-                               
-                              
+                              pattern: {
+                                value: /^\S+@\S+$/i,
+                                message: "Email must   required",
+                              },
+
                               minLength: {
                                 value: 2,
-                                  message:
-                                    "Email must   required",
-                            }},
-                            
-                           )}
+                                message: "Email must   required",
+                              },
+                            })}
                           />
-                           <small className="text-danger">{errors.email?.message}</small>
+                          <small className="text-danger">
+                            {errors.email?.message}
+                          </small>
                         </div>
                       </div>
 
@@ -190,10 +211,12 @@ const Signup = () => {
                               },
                             })}
                           />
-                           <small className="text-danger">{errors.password?.message}</small>
+                          <small className="text-danger">
+                            {errors.password?.message}
+                          </small>
                         </div>
                       </div>
-                       <div className="form-check d-flex justify-content-center mb-2">
+                      <div className="form-check d-flex justify-content-center mb-2">
                         <input
                           className="form-check-input me-2"
                           type="checkbox"
@@ -212,11 +235,10 @@ const Signup = () => {
                         <input
                           type="submit"
                           className="btn btn-lg btn-primary"
-                          value="SignUp" 
-                           
+                          value="SignUp"
                         />
                       </div>
-                      <div  >
+                      <div>
                         <p className="text-center text-muted mt-3 mb-0">
                           Have already an account?
                           <Link href="/login">
