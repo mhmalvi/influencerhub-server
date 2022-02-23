@@ -43,7 +43,8 @@ const Signup = () => {
   };
   const onSubmit = async (data) => {
     await setData(data);
-    signupData.user = value;
+    signupData.user = await value;
+
     axios
       .post("https://reqres.in/api/users", {
         signupData,
@@ -52,16 +53,16 @@ const Signup = () => {
         // status: "pending",
       })
       .then((res) => {
-        res.data.user = value;
+        // res.data.user = value;
         console.log("my res is", res.data?.signupData);
-        if (res.data.user === value) {
+        if (res.data?.signupData?.user === value) {
           alert("Data added successfully");
           reset();
         }
       });
   };
   console.log("error is is ", errors);
-  // console.log("value of user ", value);
+  //console.log("value of user ", value);
   return (
     <section className="vh-100  ">
       <div className="container h-100">
