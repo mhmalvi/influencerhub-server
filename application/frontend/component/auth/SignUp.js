@@ -61,7 +61,7 @@ const Signup = () => {
         }
       });
   };
-  console.log("error is is ", errors);
+  errors && console.log(errors);
   //console.log("value of user ", value);
   return (
     <section className="vh-100  ">
