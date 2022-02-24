@@ -29,14 +29,16 @@ const Navbar = () => {
         id="navbar-scroll"
       >
         <section className="container-fluid">
-          <a className="navbar-brand p-2" href="http://localhost:3000/">
-            <Image
-              src={LogoImg}
-              width="250px"
-              height="50px"
-              alt="Picture of the author"
-            />
-          </a>
+          <Link href="http://localhost:3000/">
+            <a className="navbar-brand p-2" href="http://localhost:3000/">
+              <Image
+                src={LogoImg}
+                width="250px"
+                height="50px"
+                alt="Picture of the author"
+              />
+            </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -112,13 +114,14 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item  ">
-                <a
-                  className="nav-link active fs-6  fw-bolder"
-                  aria-current="page"
-                  href="#"
-                >
-                  CAMPAIGNS
-                </a>
+                <Link href="campaign">
+                  <a
+                    className="nav-link active fs-6  fw-bolder"
+                    aria-current="page"
+                  >
+                    CAMPAIGNS
+                  </a>
+                </Link>
               </li>
               <li className="nav-item  ">
                 <a
