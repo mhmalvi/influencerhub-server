@@ -139,10 +139,10 @@ const Campaign = () => {
                     name="gender"
                     id="any"
                     value="any"
-                    autocomplete="off"
+                    autoComplete="off"
                     onClick={() => alert("any")}
                   />
-                  <label className="btn btn-outline-primary  " for="any">
+                  <label className="btn btn-outline-primary  " htmlFor="any">
                     Any
                   </label>
                 </div>
@@ -153,10 +153,10 @@ const Campaign = () => {
                     name="gender"
                     id="male"
                     value="male"
-                    autocomplete="off"
+                    autoComplete="off"
                     onClick={() => alert("male")}
                   />
-                  <label className="btn btn-outline-primary  " for="male">
+                  <label className="btn btn-outline-primary  " htmlFor="male">
                     Male
                   </label>
                 </div>
@@ -167,10 +167,10 @@ const Campaign = () => {
                     name="gender"
                     id="female"
                     value="female"
-                    autocomplete="off"
+                    autoComplete="off"
                     onClick={() => alert("female")}
                   />
-                  <label className="btn btn-outline-primary" for="female">
+                  <label className="btn btn-outline-primary" htmlFor="female">
                     Female
                   </label>
                 </div>
@@ -180,11 +180,11 @@ const Campaign = () => {
                     className="btn-check"
                     name="gender"
                     id="others"
-                    autocomplete="off"
+                    autoComplete="off"
                     value="others"
                     onClick={() => alert("others")}
                   />
-                  <label className="btn btn-outline-primary" for="others">
+                  <label className="btn btn-outline-primary" htmlFor="others">
                     Others
                   </label>
                 </div>
@@ -203,10 +203,10 @@ const Campaign = () => {
                     name="gender"
                     id="any"
                     value="any"
-                    autocomplete="off"
+                    autoComplete="off"
                     onClick={() => alert("any")}
                   />
-                  <label className="btn btn-outline-primary  " for="any">
+                  <label className="btn btn-outline-primary  " htmlFor="any">
                     Below 15
                   </label>
                 </div>
@@ -217,10 +217,10 @@ const Campaign = () => {
                     name="gender"
                     id="male"
                     value="male"
-                    autocomplete="off"
+                    autoComplete="off"
                     onClick={() => alert("male")}
                   />
-                  <label className="btn btn-outline-primary  " for="male">
+                  <label className="btn btn-outline-primary  " htmlFor="male">
                     20-30
                   </label>
                 </div>
@@ -231,10 +231,10 @@ const Campaign = () => {
                     name="gender"
                     id="female"
                     value="female"
-                    autocomplete="off"
+                    autoComplete="off"
                     onClick={() => alert("female")}
                   />
-                  <label className="btn btn-outline-primary" for="female">
+                  <label className="btn btn-outline-primary" htmlFor="female">
                     30-40
                   </label>
                 </div>
@@ -244,11 +244,11 @@ const Campaign = () => {
                     className="btn-check"
                     name="gender"
                     id="others"
-                    autocomplete="off"
+                    autoComplete="off"
                     value="others"
                     onClick={() => alert("others")}
                   />
-                  <label className="btn btn-outline-primary" for="others">
+                  <label className="btn btn-outline-primary" htmlFor="others">
                     Avobe 40
                   </label>
                 </div>
@@ -284,7 +284,7 @@ const Campaign = () => {
                   id="inlineRadio1"
                   value="option1"
                 />
-                <label className="form-check-label" for="inlineRadio1">
+                <label className="form-check-label" htmlFor="inlineRadio1">
                   Yes
                 </label>
               </div>
@@ -296,7 +296,7 @@ const Campaign = () => {
                   id="inlineRadio2"
                   value="option2"
                 />
-                <label className="form-check-label" for="inlineRadio2">
+                <label className="form-check-label" htmlFor="inlineRadio2">
                   No
                 </label>
               </div>
@@ -328,7 +328,7 @@ const Campaign = () => {
             {/* content creator */}
             <div className="mb-3">
               <label htmlFor="influencerRequire" className="form-label">
-                If You Make Your Content Then Select "Brand"?
+                If You Make Your Content Then Select Brand?
               </label>
               <div className="form-check form-check-inline">
                 <input
@@ -338,7 +338,7 @@ const Campaign = () => {
                   id="inlineRadio1"
                   value="option1"
                 />
-                <label className="form-check-label" for="inlineRadio1">
+                <label className="form-check-label" htmlFor="inlineRadio1">
                   Influencer
                 </label>
               </div>
@@ -350,7 +350,7 @@ const Campaign = () => {
                   id="inlineRadio2"
                   value="option2"
                 />
-                <label className="form-check-label" for="inlineRadio2">
+                <label className="form-check-label" htmlFor="inlineRadio2">
                   Brand
                 </label>
               </div>
@@ -425,10 +425,13 @@ const Campaign = () => {
                   name="facebook"
                   id="facebook1"
                   value="1k-5k"
-                  autocomplete="off"
+                  autoComplete="off"
                   onClick={() => alert("1k-5k")}
                 />
-                <label className="btn btn-outline-primary  " for="facebook1">
+                <label
+                  className="btn btn-outline-primary  "
+                  htmlFor="facebook1"
+                >
                   1k-5k
                 </label>
               </div>
@@ -439,10 +442,10 @@ const Campaign = () => {
                   name="facebook"
                   id="facebook2"
                   value="5k-10k"
-                  autocomplete="off"
+                  autoComplete="off"
                   onClick={() => alert("5k-10k")}
                 />
-                <label className="btn btn-outline-primary" for="facebook2">
+                <label className="btn btn-outline-primary" htmlFor="facebook2">
                   5k-10k
                 </label>
               </div>
@@ -452,11 +455,11 @@ const Campaign = () => {
                   className="btn-check"
                   name="facebook"
                   id="facebook3"
-                  autocomplete="off"
+                  autoComplete="off"
                   value="10k-50k"
                   onClick={() => alert("10k-50k")}
                 />
-                <label className="btn btn-outline-primary" for="facebook3">
+                <label className="btn btn-outline-primary" htmlFor="facebook3">
                   10k-50k
                 </label>
               </div>
@@ -474,10 +477,10 @@ const Campaign = () => {
                   name="tiktok"
                   id="tiktok1"
                   value="1k-5k"
-                  autocomplete="off"
+                  autoComplete="off"
                   onClick={() => alert("1k-5k")}
                 />
-                <label className="btn btn-outline-primary  " for="tiktok1">
+                <label className="btn btn-outline-primary  " htmlFor="tiktok1">
                   1k-5k
                 </label>
               </div>
@@ -488,10 +491,10 @@ const Campaign = () => {
                   name="tiktok"
                   id="tiktok2"
                   value="5k-10k"
-                  autocomplete="off"
+                  autoComplete="off"
                   onClick={() => alert("5k-10k")}
                 />
-                <label className="btn btn-outline-primary" for="tiktok2">
+                <label className="btn btn-outline-primary" htmlFor="tiktok2">
                   5k-10k
                 </label>
               </div>
@@ -501,11 +504,11 @@ const Campaign = () => {
                   className="btn-check"
                   name="tiktok"
                   id="tiktok3"
-                  autocomplete="off"
+                  autoComplete="off"
                   value="10k-50k"
                   onClick={() => alert("10k-50k")}
                 />
-                <label className="btn btn-outline-primary" for="tiktok3">
+                <label className="btn btn-outline-primary" htmlFor="tiktok3">
                   10k-50k
                 </label>
               </div>
@@ -523,10 +526,13 @@ const Campaign = () => {
                   name="instagram"
                   id="instagram1"
                   value="1k-5k"
-                  autocomplete="off"
+                  autoComplete="off"
                   onClick={() => alert("1k-5k")}
                 />
-                <label className="btn btn-outline-primary  " for="instagram1">
+                <label
+                  className="btn btn-outline-primary  "
+                  htmlFor="instagram1"
+                >
                   1k-5k
                 </label>
               </div>
@@ -537,10 +543,10 @@ const Campaign = () => {
                   name="instagram"
                   id="instagram2"
                   value="5k-10k"
-                  autocomplete="off"
+                  autoComplete="off"
                   onClick={() => alert("5k-10k")}
                 />
-                <label className="btn btn-outline-primary" for="instagram2">
+                <label className="btn btn-outline-primary" htmlFor="instagram2">
                   5k-10k
                 </label>
               </div>
@@ -550,11 +556,11 @@ const Campaign = () => {
                   className="btn-check"
                   name="instagram"
                   id="instagram3"
-                  autocomplete="off"
+                  autoComplete="off"
                   value="10k-50k"
                   onClick={() => alert("10k-50k")}
                 />
-                <label className="btn btn-outline-primary" for="instagram3">
+                <label className="btn btn-outline-primary" htmlFor="instagram3">
                   10k-50k
                 </label>
               </div>
@@ -572,10 +578,10 @@ const Campaign = () => {
                   name="youtube"
                   id="youtube1"
                   value="1k-5k"
-                  autocomplete="off"
+                  autoComplete="off"
                   onClick={() => alert("1k-5k")}
                 />
-                <label className="btn btn-outline-primary  " for="youtube1">
+                <label className="btn btn-outline-primary  " htmlFor="youtube1">
                   1k-5k
                 </label>
               </div>
@@ -586,10 +592,10 @@ const Campaign = () => {
                   name="youtube"
                   id="youtube2"
                   value="5k-10k"
-                  autocomplete="off"
+                  autoComplete="off"
                   onClick={() => alert("5k-10k")}
                 />
-                <label className="btn btn-outline-primary" for="youtube2">
+                <label className="btn btn-outline-primary" htmlFor="youtube2">
                   5k-10k
                 </label>
               </div>
@@ -599,11 +605,11 @@ const Campaign = () => {
                   className="btn-check"
                   name="youtube"
                   id="youtube3"
-                  autocomplete="off"
+                  autoComplete="off"
                   value="10k-50k"
                   onClick={() => alert("10k-50k")}
                 />
-                <label className="btn btn-outline-primary" for="youtube3">
+                <label className="btn btn-outline-primary" htmlFor="youtube3">
                   10k-50k
                 </label>
               </div>
@@ -621,10 +627,13 @@ const Campaign = () => {
                   name="livestrem"
                   id="livestrem1"
                   value="1k-5k"
-                  autocomplete="off"
+                  autoComplete="off"
                   onClick={() => alert("1k-5k")}
                 />
-                <label className="btn btn-outline-primary  " for="livestrem1">
+                <label
+                  className="btn btn-outline-primary  "
+                  htmlFor="livestrem1"
+                >
                   1k-5k
                 </label>
               </div>
@@ -635,10 +644,10 @@ const Campaign = () => {
                   name="livestrem"
                   id="livestrem2"
                   value="5k-10k"
-                  autocomplete="off"
+                  autoComplete="off"
                   onClick={() => alert("5k-10k")}
                 />
-                <label className="btn btn-outline-primary" for="livestrem2">
+                <label className="btn btn-outline-primary" htmlFor="livestrem2">
                   5k-10k
                 </label>
               </div>
@@ -648,11 +657,11 @@ const Campaign = () => {
                   className="btn-check"
                   name="livestrem"
                   id="livestrem3"
-                  autocomplete="off"
+                  autoComplete="off"
                   value="10k-50k"
                   onClick={() => alert("10k-50k")}
                 />
-                <label className="btn btn-outline-primary" for="livestrem3">
+                <label className="btn btn-outline-primary" htmlFor="livestrem3">
                   10k-50k
                 </label>
               </div>
@@ -670,10 +679,10 @@ const Campaign = () => {
                   name="twitter"
                   id="twitter1"
                   value="1k-5k"
-                  autocomplete="off"
+                  autoComplete="off"
                   onClick={() => alert("1k-5k")}
                 />
-                <label className="btn btn-outline-primary  " for="twitter1">
+                <label className="btn btn-outline-primary  " htmlFor="twitter1">
                   1k-5k
                 </label>
               </div>
@@ -684,10 +693,10 @@ const Campaign = () => {
                   name="twitter"
                   id="twitter2"
                   value="5k-10k"
-                  autocomplete="off"
+                  autoComplete="off"
                   onClick={() => alert("5k-10k")}
                 />
-                <label className="btn btn-outline-primary" for="twitter2">
+                <label className="btn btn-outline-primary" htmlFor="twitter2">
                   5k-10k
                 </label>
               </div>
@@ -697,11 +706,11 @@ const Campaign = () => {
                   className="btn-check"
                   name="twitter"
                   id="twitter3"
-                  autocomplete="off"
+                  autoComplete="off"
                   value="10k-50k"
                   onClick={() => alert("10k-50k")}
                 />
-                <label className="btn btn-outline-primary" for="twitter3">
+                <label className="btn btn-outline-primary" htmlFor="twitter3">
                   10k-50k
                 </label>
               </div>
@@ -721,7 +730,7 @@ const Campaign = () => {
                     value="video"
                     onClick={handleContantValue}
                   />
-                  <label className="form-check-label" for="inlineCheckbox1">
+                  <label className="form-check-label" htmlFor="inlineCheckbox1">
                     Video
                   </label>
                 </div>
@@ -734,7 +743,7 @@ const Campaign = () => {
                     value="post"
                     onClick={handleContantValue}
                   />
-                  <label className="form-check-label" for="inlineCheckbox2">
+                  <label className="form-check-label" htmlFor="inlineCheckbox2">
                     Static Post
                   </label>
                 </div>
@@ -778,7 +787,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox1"
+                                  htmlFor="inlineCheckbox1"
                                 >
                                   Post
                                 </label>
@@ -794,7 +803,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox2"
+                                  htmlFor="inlineCheckbox2"
                                 >
                                   Story
                                 </label>
@@ -822,7 +831,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox1"
+                                  htmlFor="inlineCheckbox1"
                                 >
                                   Post
                                 </label>
@@ -838,7 +847,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox2"
+                                  htmlFor="inlineCheckbox2"
                                 >
                                   Story
                                 </label>
@@ -866,7 +875,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox1"
+                                  htmlFor="inlineCheckbox1"
                                 >
                                   Post
                                 </label>
@@ -882,7 +891,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox2"
+                                  htmlFor="inlineCheckbox2"
                                 >
                                   Story
                                 </label>
@@ -910,7 +919,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox1"
+                                  htmlFor="inlineCheckbox1"
                                 >
                                   Post
                                 </label>
@@ -926,7 +935,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox2"
+                                  htmlFor="inlineCheckbox2"
                                 >
                                   Story
                                 </label>
@@ -978,7 +987,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox1"
+                                  htmlFor="inlineCheckbox1"
                                 >
                                   Post
                                 </label>
@@ -994,7 +1003,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox2"
+                                  htmlFor="inlineCheckbox2"
                                 >
                                   Story
                                 </label>
@@ -1022,7 +1031,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox1"
+                                  htmlFor="inlineCheckbox1"
                                 >
                                   Post
                                 </label>
@@ -1038,7 +1047,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox2"
+                                  htmlFor="inlineCheckbox2"
                                 >
                                   Story
                                 </label>
@@ -1066,7 +1075,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox1"
+                                  htmlFor="inlineCheckbox1"
                                 >
                                   Post
                                 </label>
@@ -1082,7 +1091,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox2"
+                                  htmlFor="inlineCheckbox2"
                                 >
                                   Story
                                 </label>
@@ -1110,7 +1119,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox1"
+                                  htmlFor="inlineCheckbox1"
                                 >
                                   Post
                                 </label>
@@ -1126,7 +1135,7 @@ const Campaign = () => {
                                 />
                                 <label
                                   className="form-check-label"
-                                  for="inlineCheckbox2"
+                                  htmlFor="inlineCheckbox2"
                                 >
                                   Story
                                 </label>
