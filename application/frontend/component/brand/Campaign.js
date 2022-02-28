@@ -1,13 +1,21 @@
 import React, { useState } from "react";
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload, faSolid } from "@fortawesome/free-solid-svg-icons";
+
 const Campaign = () => {
   const [value, setValue] = useState("");
+  // const [startDate, setStartDate] = useState(new Date());
   const handleContantValue = (e) => {
     setValue(e.target?.value);
     console.log(value);
   };
+  const [date, setDate] = useState(new Date());
+  const [deadline, setDeadline] = useState(new Date());
+  const handleCalendarClose = () => console.log("Calendar closed");
+  const handleCalendarOpen = () => console.log("Calendar opened");
+
   return (
     <section className="container   mt-5 py-3   ">
       <section className=" container    row my-5     bg-light  ">
@@ -63,9 +71,14 @@ const Campaign = () => {
                 aria-label="Default select example"
               >
                 <option selected>Select Campaign Catagory</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="seo">seo</option>
+                <option value="web design">web design</option>
+                <option value="web development">web development</option>
+                <option value="graphices">graphices</option>
+                <option value="data entry">data entry</option>
+                <option value="smm">smm</option>
+                <option value="digital marketing">digital marketing</option>
+                <option value="react developer">react developer</option>
               </select>
             </div>
             <div className="mb-3">
@@ -93,7 +106,7 @@ const Campaign = () => {
               <label htmlFor="inputGroupFile01" className="form-label">
                 Campaign Expired Date
               </label>
-              <input
+              {/* <input
                 className="form-control"
                 list="datalistOptions"
                 id="exampleDataList"
@@ -102,7 +115,25 @@ const Campaign = () => {
               <datalist id="datalistOptions">
                 <option value="San Francisco" />
                 <option value="New York" />
-              </datalist>
+              </datalist> */}
+              {/* <div className="input-group date" id="datepicker">
+                <input type="text" className="form-control" id="date" />
+                <span className="input-group-append">
+                  <span className="input-group-text bg-light d-block">
+                    <i className="fa fa-calendar"></i>
+                  </span>
+                </span>
+              </div> */}
+              {/* react date picker */}
+
+              <DatePicker
+                className="form-control"
+                selected={date}
+                onChange={(date) => setDate(date)}
+                onCalendarClose={handleCalendarClose}
+                onCalendarOpen={handleCalendarOpen}
+              />
+
               {/*  <input type="text" list="data" onChange={this._onChange} />              
               <datalist id="data">
                 {this.state.data.map((item, key) => (
@@ -120,10 +151,12 @@ const Campaign = () => {
                 className="form-select"
                 aria-label="Default select example"
               >
-                <option selected>Select Campaign Catagory</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option selected>Select Number of Influencer</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
               </select>
             </div>
             {/* gender */}
@@ -200,13 +233,16 @@ const Campaign = () => {
                   <input
                     type="radio"
                     className="btn-check"
-                    name="gender"
-                    id="any"
-                    value="any"
+                    name="age"
+                    id="below-15"
+                    value="below 15"
                     autoComplete="off"
-                    onClick={() => alert("any")}
+                    onClick={() => alert("below-15")}
                   />
-                  <label className="btn btn-outline-primary  " htmlFor="any">
+                  <label
+                    className="btn btn-outline-primary  "
+                    htmlFor="below-15"
+                  >
                     Below 15
                   </label>
                 </div>
@@ -214,13 +250,13 @@ const Campaign = () => {
                   <input
                     type="radio"
                     className="btn-check"
-                    name="gender"
-                    id="male"
-                    value="male"
+                    name="age"
+                    id="20-30"
+                    value="20-30"
                     autoComplete="off"
-                    onClick={() => alert("male")}
+                    onClick={() => alert("20-30")}
                   />
-                  <label className="btn btn-outline-primary  " htmlFor="male">
+                  <label className="btn btn-outline-primary  " htmlFor="20-30">
                     20-30
                   </label>
                 </div>
@@ -228,13 +264,13 @@ const Campaign = () => {
                   <input
                     type="radio"
                     className="btn-check"
-                    name="gender"
-                    id="female"
-                    value="female"
+                    name="age"
+                    id="30-40"
+                    value="30-40"
                     autoComplete="off"
-                    onClick={() => alert("female")}
+                    onClick={() => alert("30-40")}
                   />
-                  <label className="btn btn-outline-primary" htmlFor="female">
+                  <label className="btn btn-outline-primary" htmlFor="30-40">
                     30-40
                   </label>
                 </div>
@@ -242,14 +278,14 @@ const Campaign = () => {
                   <input
                     type="radio"
                     className="btn-check"
-                    name="gender"
-                    id="others"
+                    name="age"
+                    id="above-40"
                     autoComplete="off"
                     value="others"
-                    onClick={() => alert("others")}
+                    onClick={() => alert("Above 40")}
                   />
-                  <label className="btn btn-outline-primary" htmlFor="others">
-                    Avobe 40
+                  <label className="btn btn-outline-primary" htmlFor="above-40">
+                    Above 40
                   </label>
                 </div>
               </div>
@@ -276,55 +312,54 @@ const Campaign = () => {
               <label htmlFor="influencerRequire" className="form-label">
                 Would You Provide Any Physical Product?
               </label>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio1"
-                  value="option1"
-                />
-                <label className="form-check-label" htmlFor="inlineRadio1">
-                  Yes
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio2"
-                  value="option2"
-                />
-                <label className="form-check-label" htmlFor="inlineRadio2">
-                  No
-                </label>
-              </div>
-              {/* if yes then price field add */}
-              <div className="mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="price"
-                />
-              </div>
-              {/* deadline */}
-              <div className="mb-3">
-                <label
-                  htmlFor="exampleFormControlInput1"
-                  className="form-label"
-                >
-                  Deadline
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="deadline date"
-                />
-              </div>
             </div>
+            <div className="form-check form-check-inline">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio1"
+                value="option1"
+              />
+              <label className="form-check-label" htmlFor="inlineRadio1">
+                Yes
+              </label>
+            </div>
+            <div className="form-check form-check-inline">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio2"
+                value="option2"
+              />
+              <label className="form-check-label" htmlFor="inlineRadio2">
+                No
+              </label>
+            </div>
+            {/* if yes then price field add */}
+            <div className="mb-3">
+              <input
+                type="text"
+                className="form-control"
+                id="exampleFormControlInput1"
+                placeholder="price"
+              />
+            </div>
+            {/* deadline */}
+            <div className="mb-3">
+              <label htmlFor="exampleFormControlInput1" className="form-label">
+                Deadline
+              </label>
+              <DatePicker
+                className="form-control"
+                selected={deadline}
+                onChange={(deadline) => setDeadline(deadline)}
+                onCalendarClose={handleCalendarClose}
+                onCalendarOpen={handleCalendarOpen}
+              />
+            </div>
+
             {/* content creator */}
             <div className="mb-3">
               <label htmlFor="influencerRequire" className="form-label">
@@ -754,14 +789,14 @@ const Campaign = () => {
               <section className="  my-3 pb-2 m-2 p-2">
                 <div className="form-check form-check-inline">
                   <div className="mb-3">
-                    <label className=" fw-bold  mb-3  ">Post</label>
+                    {/* <label className=" fw-bold  mb-3  ">Post</label> */}
 
                     <div className="table-responsive-sm">
                       <table className="table table-borderless">
                         <thead>
                           <tr>
-                            <th scope="col">Platfrom</th>
-                            <th scope="col">Duration of video</th>
+                            <th scope="col">Post Platform</th>
+                            <th scope="col">No. of Post</th>
                             <th scope="col">Placement</th>
                           </tr>
                         </thead>
@@ -774,7 +809,7 @@ const Campaign = () => {
                                 className="form-control"
                                 id="exampleInputEmail1"
                                 aria-describedby="emailHelp"
-                                placeholder="duration"
+                                placeholder="No.of post"
                               />
                             </td>
                             <td className="p-1 m-1">
@@ -818,7 +853,7 @@ const Campaign = () => {
                                 className="form-control"
                                 id="exampleInputEmail1"
                                 aria-describedby="emailHelp"
-                                placeholder="duration"
+                                placeholder="No. of post"
                               />
                             </td>
                             <td className="p-1 m-1">
@@ -854,7 +889,7 @@ const Campaign = () => {
                               </div>
                             </td>
                           </tr>
-                          <tr>
+                          {/* <tr>
                             <th scope="row">Youtube</th>
                             <td>
                               <input
@@ -941,7 +976,7 @@ const Campaign = () => {
                                 </label>
                               </div>
                             </td>
-                          </tr>
+                          </tr> */}
                         </tbody>
                       </table>
                     </div>
@@ -954,7 +989,7 @@ const Campaign = () => {
               <section className="  my-3 pb-2 m-2 p-2">
                 <div className="form-check form-check-inline">
                   <div className="mb-3">
-                    <label className=" fw-bold  mb-3  ">Video</label>
+                    {/* <label className=" fw-bold  mb-3  ">Video</label> */}
 
                     <div className="table-responsive-sm">
                       <table className="table table-borderless">
@@ -962,6 +997,7 @@ const Campaign = () => {
                           <tr>
                             <th scope="col">Platfrom</th>
                             <th scope="col">Duration of video</th>
+                            <th scope="col">No. of video</th>
                             <th scope="col">Placement</th>
                           </tr>
                         </thead>
@@ -975,6 +1011,15 @@ const Campaign = () => {
                                 id="exampleInputEmail1"
                                 aria-describedby="emailHelp"
                                 placeholder="duration"
+                              />
+                            </td>
+                            <td className="p-1 m-1">
+                              <input
+                                type="email"
+                                className="form-control"
+                                id="exampleInputEmail1"
+                                aria-describedby="emailHelp"
+                                placeholder="No. of video"
                               />
                             </td>
                             <td className="p-1 m-1">
@@ -1022,6 +1067,15 @@ const Campaign = () => {
                               />
                             </td>
                             <td className="p-1 m-1">
+                              <input
+                                type="email"
+                                className="form-control"
+                                id="exampleInputEmail1"
+                                aria-describedby="emailHelp"
+                                placeholder="No. of video"
+                              />
+                            </td>
+                            <td className="p-1 m-1">
                               <div className="form-check form-check-inline">
                                 <input
                                   className="form-check-input"
@@ -1066,6 +1120,15 @@ const Campaign = () => {
                               />
                             </td>
                             <td className="p-1 m-1">
+                              <input
+                                type="email"
+                                className="form-control"
+                                id="exampleInputEmail1"
+                                aria-describedby="emailHelp"
+                                placeholder="No. of video"
+                              />
+                            </td>
+                            <td className="p-1 m-1">
                               <div className="form-check form-check-inline">
                                 <input
                                   className="form-check-input"
@@ -1107,6 +1170,15 @@ const Campaign = () => {
                                 id="exampleInputEmail1"
                                 aria-describedby="emailHelp"
                                 placeholder="duration"
+                              />
+                            </td>
+                            <td className="p-1 m-1">
+                              <input
+                                type="email"
+                                className="form-control"
+                                id="exampleInputEmail1"
+                                aria-describedby="emailHelp"
+                                placeholder="No. of video"
                               />
                             </td>
                             <td className="p-1 m-1">
