@@ -17,10 +17,10 @@ const Campaign = () => {
   const handleCalendarOpen = () => console.log("Calendar opened");
 
   return (
-    <section className="container   mt-5 py-3   ">
-      <section className=" container    row my-5     bg-light  ">
+    <section className="container   mt-5 py-3    ">
+      <section className=" container    row my-5     bg-light   ">
         <h5 className="fs-5 fw-bolder my-3 ">Create Campaign </h5>
-        <section className="col-sm-5 card    ">
+        <section className="col-md-6  card    ">
           {/* 1st part firast slide */}
           <section className="  my-4 pb-2 m-2 p-2">
             <div className="mb-3">
@@ -444,9 +444,9 @@ const Campaign = () => {
             </div>
           </section>
         </section>
-        <section className="col-md-7     ">
+        <section className="col-md-6     ">
           {/* 2nd part */}
-          <section className="card   ">
+          <section className="card    ">
             <section className="d-flex  my-3 pb-2 m-2 p-2">
               <div className="form-check form-check-inline">
                 <button className="btn btn-primary btn-lg fw-bold" disabled>
@@ -792,10 +792,10 @@ const Campaign = () => {
                     {/* <label className=" fw-bold  mb-3  ">Post</label> */}
 
                     <div className="table-responsive-sm">
-                      <table className="table table-borderless">
+                      <table className="table  table-borderless">
                         <thead>
                           <tr>
-                            <th scope="col">Post Platform</th>
+                            <th scope="col">Platform</th>
                             <th scope="col">No. of Post</th>
                             <th scope="col">Placement</th>
                           </tr>
@@ -996,7 +996,7 @@ const Campaign = () => {
                         <thead>
                           <tr>
                             <th scope="col">Platfrom</th>
-                            <th scope="col">Duration of video</th>
+                            <th scope="col">Video Duration</th>
                             <th scope="col">No. of video</th>
                             <th scope="col">Placement</th>
                           </tr>
