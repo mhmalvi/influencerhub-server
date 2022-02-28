@@ -11,6 +11,12 @@ const Campaign = () => {
     setValue(e.target?.value);
     console.log(value);
   };
+  // value for yes no ->>>> price
+  const [price, setPrice] = useState("");
+  // const [startDate, setStartDate] = useState(new Date());
+  const handleShowPrice = (e) => {
+    setPrice(e.target?.value);
+  };
   const [date, setDate] = useState(new Date());
   const [deadline, setDeadline] = useState(new Date());
   const handleCalendarClose = () => console.log("Calendar closed");
@@ -313,39 +319,46 @@ const Campaign = () => {
                 Would You Provide Any Physical Product?
               </label>
             </div>
-            <div className="form-check form-check-inline">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="inlineRadioOptions"
-                id="inlineRadio1"
-                value="option1"
-              />
-              <label className="form-check-label" htmlFor="inlineRadio1">
-                Yes
-              </label>
-            </div>
-            <div className="form-check form-check-inline">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="inlineRadioOptions"
-                id="inlineRadio2"
-                value="option2"
-              />
-              <label className="form-check-label" htmlFor="inlineRadio2">
-                No
-              </label>
+            <div className="mb-3">
+              <div className="form-check form-check-inline">
+                <input
+                  className="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio1"
+                  value="yes"
+                  onClick={handleShowPrice}
+                />
+                <label className="form-check-label" htmlFor="inlineRadio1">
+                  Yes
+                </label>
+              </div>
+              <div className="form-check form-check-inline">
+                <input
+                  className="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio2"
+                  value="no"
+                  onClick={handleShowPrice}
+                />
+                <label className="form-check-label" htmlFor="inlineRadio2">
+                  No
+                </label>
+              </div>
             </div>
             {/* if yes then price field add */}
-            <div className="mb-3">
-              <input
-                type="text"
-                className="form-control"
-                id="exampleFormControlInput1"
-                placeholder="price"
-              />
-            </div>
+
+            {price === "yes" && (
+              <div className="mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="price"
+                />
+              </div>
+            )}
             {/* deadline */}
             <div className="mb-3">
               <label htmlFor="exampleFormControlInput1" className="form-label">
@@ -365,29 +378,32 @@ const Campaign = () => {
               <label htmlFor="influencerRequire" className="form-label">
                 If You Make Your Content Then Select Brand?
               </label>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio1"
-                  value="option1"
-                />
-                <label className="form-check-label" htmlFor="inlineRadio1">
-                  Influencer
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio2"
-                  value="option2"
-                />
-                <label className="form-check-label" htmlFor="inlineRadio2">
-                  Brand
-                </label>
+              <div />
+              <div className="mb-3">
+                <div className="form-check form-check-inline">
+                  <input
+                    className="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio1"
+                    value="option1"
+                  />
+                  <label className="form-check-label" htmlFor="inlineRadio1">
+                    Influencer
+                  </label>
+                </div>
+                <div className="form-check form-check-inline">
+                  <input
+                    className="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio2"
+                    value="option2"
+                  />
+                  <label className="form-check-label" htmlFor="inlineRadio2">
+                    Brand
+                  </label>
+                </div>
               </div>
             </div>
             {/* if brnad choose then show below content div */}

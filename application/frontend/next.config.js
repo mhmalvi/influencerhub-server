@@ -8,4 +8,8 @@ module.exports = {
     FACEBOOK_CLIENT_SECRET: "43ba38c0cf57f5942dd57ecf7d8b50ba",
     CUSTOM_URL: "https://next-auth.js.org/",
   },
+
+  // images: {
+  //   domains: ["quadque.tech"],
+  // },
 };

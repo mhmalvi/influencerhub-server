@@ -1,3 +1,4 @@
+import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -19,7 +20,9 @@ const Navbar = () => {
       window.removeEventListener("scroll", controlNavbar);
     };
   }, []);
-
+  // user authentication
+  const { data: session } = useSession();
+  console.log(useSession());
   return (
     <>
       <nav
@@ -51,7 +54,7 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-link">
               <li className="nav-item dropdown fs-6  fw-bolder">
                 <a
                   className="nav-link active dropdown-toggle"
@@ -155,28 +158,130 @@ const Navbar = () => {
             </button>
           </form> */}
             <ul className="ms-auto  navbar-nav   mb-2 mb-lg-0">
-              <li className="nav-item  ">
-                <Link href="/login">
-                  <a
-                    className="nav-link active fs-6  fw-bolder"
-                    aria-current="page"
-                    href="#"
-                  >
-                    LOGIN
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item  ">
-                <Link href="/signup">
-                  <a
-                    className="nav-link active fs-6  fw-bolder"
-                    aria-current="page"
-                    href="#"
-                  >
-                    SIGNUP
-                  </a>
-                </Link>
-              </li>
+              {session ? (
+                // <li>{session.user?.email}</li>
+                // start
+                <>
+                  <li className="nav-item dropdown fs-6  fw-bolder">
+                    <a
+                      className="nav-link active dropdown-toggle"
+                      href="#"
+                      id="creatorsDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      {/* <Image
+                        alt="The guitarist in the concert."
+                        src="https://quadque.tech/wp-content/uploads/2020/03/image1-home2.png"
+                        width={25}
+                        height={25}
+                        layout="responsive"
+                      /> */}
+                      <img
+                        src={session.user?.image}
+                        width="25px"
+                        height="25px"
+                        className="rounded-circle"
+                        alt="Picture of the author"
+                      />
+                    </a>
+
+                    <ul
+                      className="dropdown-menu   nav-style "
+                      aria-labelledby="creatorsDropdown"
+                      style={{ marginLeft: "-174px" }}
+                    >
+                      <li>
+                        <a className="fs-6  fw-bolder dropdown-item  " href="#">
+                          Profile
+                        </a>
+                        <a className="fs-6  fw-bolder dropdown-item" href="#">
+                          Dashboard
+                        </a>
+                        <a className="fs-6  fw-bolder dropdown-item" href="#">
+                          Manage Requests
+                        </a>
+                        <a className="fs-6  fw-bolder dropdown-item" href="#">
+                          Post a Request
+                        </a>
+                        <a className="fs-6  fw-bolder dropdown-item" href="#">
+                          Refer & Get up to $100
+                        </a>
+                        <li>
+                          <hr className="dropdown-divider" />
+                        </li>
+                        <a className="fs-6  fw-bolder dropdown-item" href="#">
+                          Become a Seller
+                        </a>
+                        <a className="fs-6  fw-bolder dropdown-item" href="#">
+                          Settings
+                        </a>
+                        <a className="fs-6  fw-bolder dropdown-item" href="#">
+                          Billing NEW
+                        </a>
+                        <li>
+                          <hr className="dropdown-divider" />
+                        </li>
+                        <a className="fs-6  fw-bolder dropdown-item" href="#">
+                          English
+                        </a>
+                        <a className="fs-6  fw-bolder dropdown-item" href="#">
+                          $ USD
+                        </a>
+                        <a className="fs-6  fw-bolder dropdown-item" href="#">
+                          Help & support
+                        </a>
+                        <li>
+                          <hr className="dropdown-divider" />
+                        </li>
+                        <a
+                          className="fs-6  fw-bolder dropdown-item"
+                          href="#"
+                          onClick={signOut}
+                        >
+                          Logout
+                        </a>
+                      </li>
+
+                      {/* <li>
+                        <hr className="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a className="fs-6  fw-bolder dropdown-item" href="#">
+                          WORK
+                        </a>
+                      </li> */}
+                    </ul>
+                  </li>
+                </>
+              ) : (
+                // end
+                <>
+                  <li className="nav-item  ">
+                    <Link href="/login">
+                      <a
+                        className="nav-link active fs-6  fw-bolder"
+                        aria-current="page"
+                        href="#"
+                      >
+                        LOGIN
+                      </a>
+                    </Link>
+                  </li>
+                  <li className="nav-item  ">
+                    <Link href="/signup">
+                      <a
+                        className="nav-link active fs-6  fw-bolder"
+                        aria-current="page"
+                        href="#"
+                      >
+                        SIGNUP
+                      </a>
+                    </Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </section>

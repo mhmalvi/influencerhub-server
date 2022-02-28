@@ -1,11 +1,10 @@
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 import LoginImg from "/public/images/home/login_img.webp";
-const login = () => {
-
-  const [data, setData] = useState('');
+import { useForm } from "react-hook-form";
+const Login = () => {
+  const [data, setData] = useState("");
   const {
     register,
     handleSubmit,
@@ -13,12 +12,16 @@ const login = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-     setData(data);
+    setData(data);
   };
-  
+
+  const handle = (e) => {
+    setValue(e.target.value);
+  };
+
   // console.log(register, ewegwgwweg);
   console.log("object is ", data);
-  console.log("error is is ",errors);
+  console.log("error is is ", errors);
   return (
     <section className="vh-100">
       <div className="container h-100">
@@ -48,7 +51,10 @@ const login = () => {
 
                     <div className="divider mb-3  ">Or</div>
 
-                    <form className="mx-1 mx-md-4" onSubmit={handleSubmit(onSubmit )}>
+                    <form
+                      className="mx-1 mx-md-4"
+                      onSubmit={handleSubmit(onSubmit)}
+                    >
                       {/* <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
@@ -99,7 +105,7 @@ const login = () => {
                           />
                         </div>
                       </div> */}
-                        <div className="d-flex flex-row align-items-center mb-2">
+                      <div className="d-flex flex-row align-items-center mb-2">
                         <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
                           <label
@@ -112,22 +118,22 @@ const login = () => {
                             type="email"
                             id="form3Example3c"
                             className="form-control"
-                            {...register("email",
-                            {
+                            {...register("email", {
                               required: true,
-                              pattern:{value: /^\S+@\S+$/i, message:
-                                "Email must   required"},
-                               
-                              
+                              pattern: {
+                                value: /^\S+@\S+$/i,
+                                message: "Email must   required",
+                              },
+
                               minLength: {
                                 value: 2,
-                                  message:
-                                    "Email must   required",
-                            }},
-                            
-                           )}
+                                message: "Email must   required",
+                              },
+                            })}
                           />
-                           <small className="text-danger">{errors.email?.message}</small>
+                          <small className="text-danger">
+                            {errors.email?.message}
+                          </small>
                         </div>
                       </div>
 
@@ -153,7 +159,9 @@ const login = () => {
                               },
                             })}
                           />
-                           <small className="text-danger">{errors.password?.message}</small>
+                          <small className="text-danger">
+                            {errors.password?.message}
+                          </small>
                         </div>
                       </div>
 
@@ -193,8 +201,8 @@ const login = () => {
                         <input
                           type="submit"
                           className="btn btn-primary btn-lg"
-                          value= 'Login'
-                        /> 
+                          value="Login"
+                        />
                       </div>
                       <div className="">
                         <p className="text-center text-muted mt-3 mb-0">
@@ -227,4 +235,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

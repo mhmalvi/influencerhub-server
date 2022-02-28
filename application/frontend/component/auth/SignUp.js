@@ -113,7 +113,7 @@ const Signup = () => {
                         </>
                       ) : (
                         <>
-                          <div className="text-center">
+                          {/* <div className="text-center">
                             <h3 className="mt-5">
                               {session.user?.email || session.user?.name}
                             </h3>
@@ -124,7 +124,7 @@ const Signup = () => {
                             >
                               signOut
                             </button>
-                          </div>
+                          </div> */}
                         </>
                       )}
                     </div>

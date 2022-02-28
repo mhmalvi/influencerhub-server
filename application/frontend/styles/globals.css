@@ -441,3 +441,21 @@ and left sides of the text */
 }
 /* alert */
 /* radio button campaign */
+/* text and font of nav and button and profile */
+/* .login-nav-dropdown {
+  font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  color: #7a7d85 !important;
+} */
+
+ul.nav-style li a {
+  font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  color: #7a7d85 !important;
+}
+ul.nav-style li a:hover {
+  color: #19a463 !important;
+}
+ul.nav-link li a {
+  font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  color: #7a7d85 !important;
+  font-size: large;
+}
