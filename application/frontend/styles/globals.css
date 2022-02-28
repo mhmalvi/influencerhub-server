@@ -450,6 +450,7 @@ and left sides of the text */
 ul.nav-style li a {
   font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif !important;
   color: #7a7d85 !important;
+  font-weight: 700 !important;
 }
 ul.nav-style li a:hover {
   color: #19a463 !important;
@@ -458,4 +459,5 @@ ul.nav-link li a {
   font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif !important;
   color: #7a7d85 !important;
   font-size: large;
+  font-weight: 700 !important;
 }
