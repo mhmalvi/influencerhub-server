@@ -117,7 +117,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item  ">
-                <Link href="campaign">
+                <Link href="/campaign">
                   <a
                     className="nav-link active fs-6  fw-bolder"
                     aria-current="page"
