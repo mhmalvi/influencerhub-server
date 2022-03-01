@@ -214,9 +214,11 @@ const Navbar = () => {
                         <a className="fs-6  fw-bolder dropdown-item" href="#">
                           Become a Seller
                         </a>
-                        <a className="fs-6  fw-bolder dropdown-item" href="#">
-                          Settings
-                        </a>
+                        <Link href="brand/settings">
+                          <a className="fs-6  fw-bolder dropdown-item">
+                            Settings
+                          </a>
+                        </Link>
                         <a className="fs-6  fw-bolder dropdown-item" href="#">
                           Billing NEW
                         </a>
