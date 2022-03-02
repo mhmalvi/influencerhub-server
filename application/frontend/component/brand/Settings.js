@@ -23,9 +23,9 @@ const Settings = () => {
   const handleCalendarOpen = () => console.log("Calendar opened");
 
   return (
-    <section className=" mt-3 py-3">
+    <section>
       <section className=" bg-light  ">
-        <section className="container mt-5 py-3 ">
+        <section>
           <section className="row my-5 ">
             {/* 1st part   */}
             <section className="col-md-6">

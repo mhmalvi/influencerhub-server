@@ -461,3 +461,11 @@ ul.nav-link li a {
   font-size: large;
   font-weight: 700 !important;
 }
+ul li a {
+  text-decoration: none;
+}
+.profile-navbar-style {
+  font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  color: #7a7d85 !important;
+  font-weight: 700 !important;
+}

@@ -1,13 +1,17 @@
 import React from "react";
+
 import Setting from "../../component/brand/Setting";
+import Security from "../../component/brand/Security";
 import Layout from "../../component/layouts/layout";
 
-function settings({ children }) {
+const security = () => {
   return (
     <Layout>
-      <Setting />
+      <Setting>
+        <Security />
+      </Setting>
     </Layout>
   );
-}
+};
 
-export default settings;
+export default security;

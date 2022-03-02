@@ -219,6 +219,7 @@ const Navbar = () => {
                             Settings
                           </a>
                         </Link>
+
                         <Link href="/brand/channel">
                           <a className="fs-6  fw-bolder dropdown-item">
                             Channel
