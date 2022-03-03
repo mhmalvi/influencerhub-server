@@ -1,5 +1,6 @@
 import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
+import Link from "next/link";
 const Dashboard = () => {
   // user authentication
   const { data: session } = useSession();
@@ -31,29 +32,39 @@ const Dashboard = () => {
 
                   <div className="ms-2 p-3">
                     <div className="my-2  ">
-                      <a href="#" className="btn btn-primary form-control">
-                        Setting
-                      </a>
+                      <Link href="/setting">
+                        <a className="bg-primary text-white text-center form-control text-decoration-none">
+                          Setting
+                        </a>
+                      </Link>
                     </div>
                     <div className="my-2  ">
-                      <a href="#" className="btn btn-primary form-control">
-                        Campaign
-                      </a>
+                      <Link href="/setting">
+                        <a className="bg-primary text-white text-center form-control text-decoration-none">
+                          Campaign
+                        </a>
+                      </Link>
                     </div>
                     <div className="my-2  ">
-                      <a href="#" className="btn btn-primary form-control">
-                        Bid List
-                      </a>
+                      <Link href="brand/setting">
+                        <a className="bg-primary text-white text-center form-control text-decoration-none">
+                          Bid List
+                        </a>
+                      </Link>
                     </div>
                     <div className="my-2  ">
-                      <a href="#" className="btn btn-primary form-control">
-                        Payment Method
-                      </a>
+                      <Link href="brand/setting">
+                        <a className="bg-primary text-white text-center form-control text-decoration-none">
+                          Payment Method
+                        </a>
+                      </Link>
                     </div>
                     <div className="my-2  ">
-                      <a href="#" className="btn btn-primary form-control">
-                        Hired Influencers
-                      </a>
+                      <Link href="brand/setting">
+                        <a className="bg-primary text-white text-center form-control text-decoration-none">
+                          Hired Influencers
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
