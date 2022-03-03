@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Link from "next/link";
 import Image from "next/image";
 import SignupImg from "/public/images/home/sign_in.png.png";
+import NewWindow from "react-new-window";
 const Signup = () => {
   const axios = require("axios").default;
   const [signupData, setData] = useState([]);
@@ -103,6 +104,7 @@ const Signup = () => {
                           >
                             Google
                           </button>
+
                           <button
                             type="button"
                             className="btn btn-primary btn-lg ms-2"

@@ -196,9 +196,11 @@ const Navbar = () => {
                         <a className="fs-6  fw-bolder dropdown-item  " href="#">
                           Profile
                         </a>
-                        <a className="fs-6  fw-bolder dropdown-item" href="#">
-                          Dashboard
-                        </a>
+                        <Link href="/brand/dashboard">
+                          <a className="fs-6  fw-bolder dropdown-item">
+                            Dashboard
+                          </a>
+                        </Link>
                         <a className="fs-6  fw-bolder dropdown-item" href="#">
                           Manage Requests
                         </a>

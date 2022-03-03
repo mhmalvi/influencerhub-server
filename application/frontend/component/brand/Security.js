@@ -131,7 +131,7 @@ const Security = () => {
                         {/* 2nd part */}
                         <section className="col-md-6">
                           <h5 className="fs-5 fw-bolder my-3 ">
-                            Security Settings{" "}
+                            Security Settings
                           </h5>
                           <div className=" card border-0">
                             <section className="  my-4 pb-2 m-2 p-2">
