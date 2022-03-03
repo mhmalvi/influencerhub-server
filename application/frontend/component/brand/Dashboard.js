@@ -4,7 +4,7 @@ import Link from "next/link";
 const Dashboard = () => {
   // user authentication
   const { data: session } = useSession();
-  console.log(useSession());
+  console.log(useSession(), "is given");
   return (
     <section className=" mt-3 py-3">
       <section className=" bg-light  ">
@@ -23,7 +23,7 @@ const Dashboard = () => {
                 <div className="card-body  ">
                   <div className="text-center">
                     <h5 className="card-title  ">
-                      Name:<span className="ms-2">Mahmud</span>
+                      Name:<span className="ms-2">{session?.user?.name}</span>
                     </h5>
                     <h5 className="card-title ">
                       Joined:<span className="ms-2">12-03-2022</span>
