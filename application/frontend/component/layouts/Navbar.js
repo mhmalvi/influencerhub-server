@@ -71,9 +71,9 @@ const Navbar = () => {
                   aria-labelledby="creatorsDropdown"
                 >
                   <li>
-                    <a className="fs-6  fw-bolder dropdown-item" href="#">
-                      ACTION
-                    </a>
+                    <Link href="/action">
+                      <a className="fs-6  fw-bolder dropdown-item">ACTION</a>
+                    </Link>
                   </li>
 
                   <li>

@@ -10,7 +10,7 @@ const Dashboard = () => {
       <section className=" bg-light  ">
         <section className="container mt-5 py-3 ">
           <section className="row my-5 ">
-            {/* 1st part  of  */}
+            {/* 1st part  */}
             <section className="col-md-3  ">
               <div className="card   p-3 border-0" style={{ width: "18rem" }}>
                 <div className="text-center p-2" style={{ marginTop: "-70px" }}>
