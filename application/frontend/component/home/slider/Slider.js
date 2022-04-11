@@ -3,14 +3,8 @@ import Image from "next/image";
 import HeaderHomeImage from "../../../public/images/home/narrators-influencer-marketing-platform.png";
 import { motion, useAnimationFrame, useSpring } from "framer-motion";
 function Slider() {
-  //framer motion
   const ref = useRef(null);
-  // animation rotation setup
-  // useAnimationFrame((t) => {
-  //   const rotate = Math.sin(t / 10000) * 200;
-  //   const y = (1 + Math.sin(t / 1000)) * -50;
-  //   ref.current.style.transform = `translateY(${y}px) rotateX(${rotate}deg) rotateY(${rotate}deg)`;
-  // });
+
   return (
     <motion.div
       initial={{ y: -250, opacity: 0 }}
@@ -24,9 +18,9 @@ function Slider() {
       }}
       className="header-bg "
     >
-      <div className="container   mt-5 py-3  ">
-        <div className="row my-5 align-items-center ">
-          <section className="col-sm-5 my-4 py-2 ">
+      <div className="container  mt-5 py-3  ">
+        <div className="row my-5 align-items-center slider-section">
+          <section className="col-sm-6 my-4 py-2 ">
             {/* egg animation added start */}
             {/* <motion.div className="circle m-auto mt-5 " ref={ref}></motion.div> */}
             {/* egg animation added end */}
@@ -40,10 +34,10 @@ function Slider() {
               ref={ref}
             /> */}
             <div className="my-4 pb-2">
-              <h1 className="my-4 py-2 p-3 fs-1    fw-bolder  ">
+              <h1 className="my-4 py-2   fs-1    fw-bolder  ">
                 The platform that connects brands with influencers
               </h1>
-              <p className="my-4 py-2 p-3 fs-5 fw-bolder">
+              <p className="my-4 py-2   fs-5 fw-bolder">
                 The best way to create, manage and measure your campaigns with
                 influencers
               </p>
@@ -60,16 +54,16 @@ function Slider() {
                 // }}
                 className="d-flex"
               >
-                <button className="btn btn-bg-color   text-white  ms-2 my-4 py-2 p-3 fs-4 fw-bolder  ml-5">
-                  I`M BRAND
+                <button className="btn    my-4 py-2     btn-outline-dark rounded-pill  slider-btn-bg    ">
+                  Brand & Agencie
                 </button>
-                <button className="btn btn-bg-color   text-white  ms-2 my-4 py-2 p-3 fs-4 fw-bolder  ml-5">
-                  INFLUENCER
+                <button className="btn     ms-3 my-4 py-2  btn btn-outline-dark rounded-pill  slider-btn-bg    ">
+                  Creator
                 </button>
               </div>
             </div>
           </section>
-          <section className="col-sm-7 p-2 mt-5">
+          <section className="col-sm-6 p-2 mt-5    slider-img-section">
             <Image src={HeaderHomeImage} alt="Picture of the author" />
           </section>
         </div>

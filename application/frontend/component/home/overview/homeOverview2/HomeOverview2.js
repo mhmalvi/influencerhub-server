@@ -9,21 +9,22 @@ function HomeOverview2() {
         <div className="row align-items-center">
           <section className="col-md-8 col-sm-12">
             {/* <Roll left> */}
-            <div className="  my-4 py-2">
-              <h3
-                className="my-4 py-2   fs-2   fw-bolder  whileHover={{
+            <div className="  my-2 py-2">
+              <h2
+                className="my-2    whileHover={{
                     scale: 1.3,
                     transition: { duration: 2 },
                   }} "
               >
-                The platform that connects brands with influencers.
-              </h3>
-              <p className="py-2 fw-bolder">
-                People trust people. Streamline your influencer marketing
-                campaigns with Narrators’ dual-sided platform fueled by a
-                database of 500K influencers. Headquartered in Singapore, the
-                Narrators award-winning influencer marketing platform operates
-                in several markets across the region.
+                Work with perfect Creator
+              </h2>
+              <p>
+                St. Augustine College Now Offers A Fully Online English Language
+                Program. Learn more today. Learn English Today! Take An Online
+                ESL Course For Adults Through St. Augustine College. Check
+                Academic Calendar. Browse Resources. View Events. Highlights:
+                Academic Calendar Available, Catalog Available, Resources
+                Available.
               </p>
             </div>
             {/* </Roll> */}
@@ -34,13 +35,14 @@ function HomeOverview2() {
                 <Image src={OverViewImage2} alt="Picture of the author" />
               </div>
             </Roll> */}
-            <div className="my-4 py-2">
+            <div className="my-2 py-2">
               <video
-                width=" 360px"
-                height="480px"
+                width=" 411px"
+                height="411px"
+                borderRadius="15px"
                 autoPlay
                 muted
-                src={"/videos/overview_video_2.mp4"}
+                src={"/videos/video-demo-2.mp4"}
               />
             </div>
           </section>

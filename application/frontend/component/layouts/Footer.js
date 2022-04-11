@@ -11,9 +11,11 @@ function Footer() {
           className="d-flex justify-content-between p-4 text-white"
           style={{ backgroundcolor: "#21D192" }}
         >
-          <div className="me-5">
-            <span>Get connected with us on social networks:</span>
-          </div>
+          {/* <div className="me-5">
+            <span className="text-dark container">
+              Get connected with us on social networks:
+            </span>
+          </div> */}
           <div>
             <a href="" className="text-white me-4">
               <i className="fab fa-facebook-f"></i>
@@ -36,7 +38,7 @@ function Footer() {
           </div>
         </section>
         <section className="">
-          <div className="container text-center text-md-start mt-5">
+          <div className="  text-center text-md-start  ">
             <div className="row mt-3">
               <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                 <h6 className="text-uppercase fw-bold">Company name</h6>

@@ -12,6 +12,12 @@ import HomeOverview4 from "../component/home/overview/homeOverview4/HomeOverview
 import HomeOverview5 from "../component/home/overview/homeOverview5/HomeOverview5";
 import VideoIntroducing from "../component/home/videoIntroducing/VideoIntroducing";
 import CustomerStories from "../component/home/customerStories/CustomerStories";
+import Company from "../component/home/company/Company";
+import Importance from "../component/home/importance/importance";
+import WorkPlatforms from "../component/home/workPlatforms/WorkPlatforms";
+import Studio from "../component/home/studio/Studio";
+import Testimonial from "../component/home/testimonial/Testimonial";
+import WorkShowcase from "../component/home/workshowcase/WorkShowcase";
 
 export default function Home() {
   // const navbarScroll = document.getElementById("navbar-scroll");
@@ -33,20 +39,27 @@ export default function Home() {
 
       <Layout>
         <Slider />
+        <Company />
+        <Importance />
+        <HomeOverview1 />
+        <HomeOverview2 />
+        <HomeOverview3 />
+        <WorkPlatforms />
+        <Studio />
+        <Testimonial />
+        <WorkShowcase />
 
-        {/* overview portion of home page */}
+        {/* overview portion of home page  
         <div className="header-bg">
-          <HomeOverview1 />
-          <HomeOverview2 />
-          <HomeOverview3 />
           <Mapview />
-          {/* <HomeOverview4 />
-          <HomeOverview5 /> */}
+         <HomeOverview4 />
+          <HomeOverview5 />  
         </div>
         <VideoIntroducing />
         <CustomerStories />
-
-        {/* <Contact /> */}
+         <Contact />
+        
+        */}
       </Layout>
     </>
   );

@@ -6,9 +6,9 @@ function HomeOverview1() {
   return (
     <section>
       {/* <Roll left>
-        <h3 className="text-center p-3   fs-3  my-6  fw-bolder ">
+        <h2 className="text-center p-3   fs-3  my-6  fw-bolder ">
           Make the most of your influencer marketing program with
-        </h3>
+        </h2>
       </Roll> */}
       <section
         // initial={{ opacity: 0, x: 180, z: 180 }}
@@ -17,7 +17,7 @@ function HomeOverview1() {
         className="container my-3"
       >
         <div className="row align-items-center">
-          <section className="col-md-4  col-sm-12">
+          <section className="col-md-6  col-sm-12">
             {/* <Roll left>
               <div className="my-4 py-2">
                 <Image src={OverViewImage1} alt="Picture of the author" />
@@ -37,33 +37,35 @@ function HomeOverview1() {
                 type="video/mp4"
               />
             </video> */}
-            <div className="my-4 py-2">
+            <div className="my-2 py-2">
               <video
-                width=" 360px"
-                height="480px"
+                width=" 411px"
+                height="411px"
+                borderRadius="15px"
                 autoPlay
                 muted
-                src={"/videos/overviews_video.mp4"}
+                src={"/videos/video-demo.mp4"}
               />
             </div>
           </section>
-          <section className="col-md-8 col-sm-12">
+          <section className="col-md-6 col-sm-12">
             {/* <Roll right> */}
             <div className="  my-4 py-2">
-              <h3
-                className="my-4 py-2   fs-2   fw-bolder  whileHover={{
+              <h2
+                className="my-2 py-2     whileHover={{
                     scale: 1.3,
                     transition: { duration: 2 },
                   }} "
               >
                 The platform that connects brands with influencers.
-              </h3>
-              <p className="py-2 fw-bolder">
-                People trust people. Streamline your influencer marketing
-                campaigns with Narrators’ dual-sided platform fueled by a
-                database of 500K influencers. Headquartered in Singapore, the
-                Narrators award-winning influencer marketing platform operates
-                in several markets across the region.
+              </h2>
+              <p>
+                St. Augustine College Now Offers A Fully Online English Language
+                Program. Learn more today. Learn English Today! Take An Online
+                ESL Course For Adults Through St. Augustine College. Check
+                Academic Calendar. Browse Resources. View Events. Highlights:
+                Academic Calendar Available, Catalog Available, Resources
+                Available.
               </p>
             </div>
             {/* </Roll> */}

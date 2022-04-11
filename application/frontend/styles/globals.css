@@ -2,18 +2,80 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Montserrat Alternates, sans-serif !important;
+
+  font-family: "Abhaya Libre", "Mulish", "Pacifico";
   font-weight: 700 !important;
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  /* font-family: 'Abhaya Libre', serif;
+   font-family: 'Mulish', sans-serif;
+    font-family: 'Pacifico', cursive; */
 }
 h1 {
-  font-family: Montserrat Alternates, sans-serif !important;
+  font-family: "Abhaya Libre", "Mulish";
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px; /* or 125% */
+  color: #151d48;
+}
+h2 {
+  font-family: "Abhaya Libre";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 40px;
+  /* identical to box height, or 160% */
+
+  letter-spacing: 1px;
+
+  color: #333333;
+}
+p {
+  font-family: "Mulish";
+  color: #333333bf;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+button {
+  font-family: "Mulish" !important;
+}
+ul li {
+  font-family: "Mulish";
+}
+.navbar-brand-logo {
+  font-family: "Pacifico";
+
+  width: auto;
+
+  left: 120px;
+
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+
+  /* identical to box height, or 24px */
+
+  letter-spacing: 5px;
+
+  color: #000000;
+
+  /* identical to box height, or 24px */
+}
+.nav-btn-bg {
+  background: linear-gradient(84.75deg, #0074d1 0%, #d100d1 100%);
+}
+.slider-btn-bg:hover {
+  background: linear-gradient(84.75deg, #0074d1 0%, #d100d1 100%);
 }
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 * {
@@ -468,4 +530,115 @@ ul li a {
   font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif !important;
   color: #7a7d85 !important;
   font-weight: 700 !important;
+}
+.importance-text {
+  text-align: center !important;
+}
+/* testimonial */
+.testimonial-img {
+  position: relative;
+  z-index: 1;
+}
+.shape-img {
+  position: absolute;
+  top: 21%;
+  right: -5%;
+  width: 108px;
+  height: 101px;
+  z-index: 0;
+}
+.shape-img-2 {
+  position: absolute;
+  top: 23%;
+  left: 67%;
+  right: 0%;
+  width: 108px;
+  height: 101px;
+  z-index: 0;
+}
+/* workShowcase */
+.gallary-image {
+  position: relative;
+  z-index: -1;
+  width: 370px;
+  height: 400px;
+  text-align: center;
+}
+
+.image-gallary-1 {
+  position: absolute;
+  top: 38%;
+  left: 0%;
+  border-radius: 10%;
+  width: 114.94px;
+  height: 197.3px;
+  background-color: rgb(222, 236, 17);
+  z-index: 1;
+  opacity: 0.3px;
+}
+.image-gallary-2 {
+  position: absolute;
+  top: 68%;
+  left: 34%;
+  border-radius: 10%;
+  width: 120.9px;
+  height: 120.76px;
+  background-color: rgb(173, 98, 173);
+  z-index: 1;
+  opacity: 0.3px;
+}
+.image-gallary-3 {
+  position: absolute;
+  top: 68%;
+  left: 69%;
+  border-radius: 10%;
+  width: 157.51px;
+  height: 151.37px;
+  background-color: rgb(172, 104, 172);
+  z-index: 1;
+  opacity: 0.3px;
+}
+.image-gallary-4 {
+  position: absolute;
+  top: 24%;
+  left: 34%;
+  border-radius: 10%;
+  width: 200.09px;
+  height: 161.58px;
+  background-color: rgb(109, 189, 109);
+  z-index: 1;
+  opacity: 0.3px;
+}
+.image-gallary-5 {
+  position: absolute;
+  top: 41%;
+  left: 91%;
+  border-radius: 10%;
+  width: 72.37px;
+  height: 94.4px;
+  background-color: rgb(65, 53, 65);
+  z-index: 1;
+  opacity: 0.3px;
+}
+
+.image-gallary-6 {
+  position: absolute;
+  top: 41%;
+  left: 114%;
+  border-radius: 10%;
+  width: 72.37px;
+  height: 94.4px;
+  background-color: rgb(108, 168, 131);
+  z-index: 1;
+}
+.image-gallary-7 {
+  position: absolute;
+  top: 68%;
+  left: 114%;
+  border-radius: 10%;
+  width: 72.37px;
+  height: 94.4px;
+  background-color: rgb(10, 10, 10);
+  z-index: 1;
+  opacity: 0.3px;
 }

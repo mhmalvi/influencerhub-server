@@ -1,8 +1,8 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import { Roll, Rotate } from "react-reveal";
-import OverViewImage3 from "../../../../public/images/home/overview-image-3.png";
-function HomeOverview3() {
+
+const Studio = () => {
   return (
     <section>
       {/* <h3 className="text-center p-3   fs-1  my-6  fw-bolder ">
@@ -10,7 +10,7 @@ function HomeOverview3() {
       </h3> */}
       <section className="container ">
         <div className="row align-items-center">
-          <section className="col-md-6 ">
+          <section className="col-md-6">
             {/* <Roll left>
               <div className="my-4 py-2">
                 <Image src={OverViewImage3} alt="Picture of the author" />
@@ -23,7 +23,7 @@ function HomeOverview3() {
                 borderRadius="15px"
                 autoPlay
                 muted
-                src={"/videos/video-demo.mp4"}
+                src={"/videos/video-demo-2.mp4"}
               />
             </div>
           </section>
@@ -52,6 +52,6 @@ function HomeOverview3() {
       </section>
     </section>
   );
-}
+};
 
-export default HomeOverview3;
+export default Studio;

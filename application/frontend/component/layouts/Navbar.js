@@ -24,22 +24,26 @@ const Navbar = () => {
   const { data: session } = useSession();
   console.log(useSession());
   return (
-    <>
+    <section>
       <nav
         className={`fixed-top  header-bg navbar navbar-expand-lg navbar-light  ${
           !show && " shadow-lg  rounded bg-light  nav-scroll"
         }`}
         id="navbar-scroll"
       >
-        <section className="container-fluid">
+        <section className="container ">
           <Link href="http://localhost:3000/">
-            <a className="navbar-brand p-2" href="http://localhost:3000/">
-              <Image
+            <a
+              className="navbar-brand-logo   p-2 fs-1 fw-bolder   "
+              href="http://localhost:3000/"
+            >
+              {/* <Image
                 src={LogoImg}
                 width="250px"
                 height="50px"
                 alt="Picture of the author"
-              />
+              /> */}
+              Influencer
             </a>
           </Link>
           <button
@@ -54,7 +58,9 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-link">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-link"></ul>
+
+            <ul className="ms-auto  navbar-nav   mb-2 mb-lg-0 align-items-center">
               <li className="nav-item dropdown fs-6  fw-bolder">
                 <a
                   className="nav-link active dropdown-toggle"
@@ -64,7 +70,7 @@ const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  CREATORS
+                  Brand And Agencie
                 </a>
                 <ul
                   className="dropdown-menu"
@@ -96,7 +102,7 @@ const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  BRAND
+                  Creator
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="brandDropdown">
                   <li>
@@ -122,7 +128,7 @@ const Navbar = () => {
                     className="nav-link active fs-6  fw-bolder"
                     aria-current="page"
                   >
-                    CAMPAIGNS
+                    Studio
                   </a>
                 </Link>
               </li>
@@ -132,7 +138,7 @@ const Navbar = () => {
                   aria-current="page"
                   href="#"
                 >
-                  ABOUT US
+                  Insight
                 </a>
               </li>
               <li className="nav-item  ">
@@ -141,23 +147,9 @@ const Navbar = () => {
                   aria-current="page"
                   href="#"
                 >
-                  CONTACT
+                  About
                 </a>
               </li>
-            </ul>
-
-            {/* <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form> */}
-            <ul className="ms-auto  navbar-nav   mb-2 mb-lg-0">
               {session ? (
                 // <li>{session.user?.email}</li>
                 // start
@@ -171,13 +163,6 @@ const Navbar = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      {/* <Image
-                        alt="The guitarist in the concert."
-                        src="https://quadque.tech/wp-content/uploads/2020/03/image1-home2.png"
-                        width={25}
-                        height={25}
-                        layout="responsive"
-                      /> */}
                       <img
                         src={session.user?.image}
                         width="25px"
@@ -275,18 +260,18 @@ const Navbar = () => {
                         aria-current="page"
                         href="#"
                       >
-                        LOGIN
+                        Login
                       </a>
                     </Link>
                   </li>
-                  <li className="nav-item  ">
+                  <li className="nav-item text-white ">
                     <Link href="/signup">
                       <a
-                        className="nav-link active fs-6  fw-bolder"
+                        className="nav-link active text-white fs-6  fw-bolder   btn rounded-pill  nav-btn-bg p-2"
                         aria-current="page"
                         href="#"
                       >
-                        SIGNUP
+                        Sign up
                       </a>
                     </Link>
                   </li>
@@ -306,7 +291,7 @@ const Navbar = () => {
           $("#navbar-scroll").css("top", "-100%");
         }
       })} */}
-    </>
+    </section>
   );
 };
 
