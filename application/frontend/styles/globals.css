@@ -71,6 +71,7 @@ ul li {
 }
 .slider-btn-bg:hover {
   background: linear-gradient(84.75deg, #0074d1 0%, #d100d1 100%);
+  border: 0px !important;
 }
 
 a {
