@@ -1,3 +1,6 @@
+<!-- repo-card -->
+![influencerhub-server](docs/assets/social-card.png)
+
 # InfluencerHub Server
 
 A full-stack influencer management platform with a monorepo structure containing both the Laravel backend API and a Next.js frontend application. This platform facilitates influencer discovery, campaign management, and collaboration tracking.
